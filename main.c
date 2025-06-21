@@ -3,86 +3,54 @@
 #include<unistd.h>
 #include<stdlib.h>
 #include <string.h>
+#include <stdio.h>
+
+#include "utils.h"
 
 void play_with_list();
 
-typedef struct {
-    int i;
-} IntHolder;
-
-union code
-{
-    IntHolder p;
-    struct{
-        unsigned a0:1;
-        unsigned a1:1;
-        unsigned a2:1;
-        unsigned a3:1;
-        unsigned a4:1;
-        unsigned a5:1;
-        unsigned a6:1;
-        unsigned a7:1;
-    } byte;
-};
-
-
 int main(void) {
+    // printf("%d\n", 10);
+    // printf("%d\n", 10/10);
+    // printf("%d\n", 10/10/10);
+    play_with_list();
     return 0;
 }
 
+bool sort_func_(const int a, const int b) {
+    // printf("%d - %d, %d - %d\n", a, a %10, b, b %10);
+    return a % 10 > b % 10;
+}
+
 void play_with_list() {
+    List *list = create_list();
 
-    int a;
-    printf("%d\n", a);
+    debug_print_list(list);
+    append_val(list, 1);
+    debug_print_list(list);
+    append_val(list, 22);
+    append_val(list, 41);
 
-    List list = create_list();
-    // put_val(&list, 0); print_list(&list);  // FIXME: BUG
+    printf("BEFORE INSERTION: \n");
+    debug_print_list(list);
+    insert_val_in_list(&list, 1, 10);
+    printf("AFTER INSERTION: \n");
+    debug_print_list(list);
 
-    // get_item(&list, 3);
+    printf("\n\n");
 
-    // delete_list(&list);
-    // printf("before");
-    // sleep(2);
-    // printf("after");
+    printf("AFTER SORTING:\n");
+    sort_list(list, sort_func_);
+    debug_print_list(list);
 
-    // printf("%d\n", get_len(&list));
-    // puts("");
+    // print_list(list);
+    // printf("BEFORE DELETION:\n");
+    // debug_print_list(list);
     //
-    // put_val(&list, 34);
-    // print_list(&list);
-    // printf("%d\n", get_len(&list));
-    // printf("list[0] %d\n", get_item(&list, 0));
-    // puts("");
-    //
-    // put_vals(&list, 2, 1, 5);
-    // print_list(&list);
-    // printf("%d\n", get_len(&list));
-    // puts("");
-    //
-    // put_val(&list, 3);
-    // print_list(&list);
-    // printf("%d\n", get_len(&list));
-    // puts("");
-    //
-    // printf("list[0] %d\n", get_item(&list, 0));
-    // printf("list[1] %d\n", get_item(&list, 1));
-    // printf("list[2] %d\n", get_item(&list, 2));
-    // printf("list[3] %d\n",
+    // const int deleted = pop_item(&list, 2);
+    // printf("AFTER DELETION:\n");
+    // debug_print_list(list);
+    // printf("DELETED VALUE - %d\n", deleted);
 
-    // printf("list[4] %d\n", get_item(list, 4));
-
-    // struct List *list2 = list.next_node;
-    // printf("%d\n", list.val);
-    // List *ptr = list.next_node;
-    // printf("%d\n", ptr->val);
-    // List *ptr2 = (*ptr).next_node;
-    // printf("%d\n", ptr2->val);
-
-    // put_vals(list, 3, 2, 123, 45);
-    // print_list(&list);
-
-    // printf("%d", get_item(list, 3));
-
-    // printf("Hello, World!\n");
-
+    delete_list(list);
 }
