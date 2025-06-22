@@ -1,12 +1,6 @@
 #include <assert.h>
 #include <stdio.h>
 #include "linked_list.h"
-#include<unistd.h>
-#include<stdlib.h>
-#include <string.h>
-#include <stdio.h>
-
-#include "utils.h"
 
 void play_with_list();
 void test_list();
@@ -16,8 +10,9 @@ int main(void) {
     return 0;
 }
 
-
+#pragma region Lists
 void play_with_list() {
+    // List *list = create_list();
     // debug_print_list(list);
     // append_val(list, 1);
     // debug_print_list(list);
@@ -35,7 +30,7 @@ void play_with_list() {
     // printf("AFTER SORTING:\n");
     // sort_list(list, sort_func_);
     // debug_print_list(list);
-
+    //
     // print_list(list);
     // printf("BEFORE DELETION:\n");
     // debug_print_list(list);
@@ -44,7 +39,8 @@ void play_with_list() {
     // printf("AFTER DELETION:\n");
     // debug_print_list(list);
     // printf("DELETED VALUE - %d\n", deleted);
-
+    //
+    // delete_list(list);
 }
 
 bool from_small_to_big(const int a, const int b) {
@@ -130,3 +126,4 @@ void test_list() {
 
     delete_list(list);
 }
+#pragma endregion Lists
