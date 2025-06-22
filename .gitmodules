@@ -1,0 +1,3 @@
+[submodule "submodules/external/unity_cmake/Unity"]
+	path = submodules/external/unity_cmake/Unity
+	url = https://github.com/ThrowTheSwitch/Unity.git
