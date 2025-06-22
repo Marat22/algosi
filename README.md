@@ -1,4 +1,4 @@
 # TODO:
-- [ ] Linked list
+- [x] Linked list
 - [ ] HashMap
 - [ ] Queue
