@@ -67,8 +67,10 @@ void append_val(List *list, const int val) {
     ptr->val = val;
     ptr->next_node = malloc(sizeof(List));
 
-    List next_node = *(List *) ptr->next_node;
-    next_node.len = 0;
+    List* next_node = (List *) ptr->next_node;
+    next_node->len = 0;
+    next_node->val = 0;
+    next_node->next_node = NULL;
 }
 
 void append_vals(List *list, const int qty, ...) {
@@ -132,7 +134,6 @@ int get_item(List *list, unsigned int i) {
 int get_len(const List *list) {
     return list->len;
 }
-
 
 void debug_print_list(List *list) {
     List *ptr = list;
