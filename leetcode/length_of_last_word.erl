@@ -1,3 +1,5 @@
+%% https://leetcode.com/problems/length-of-last-word/
+    
 -module(length_of_last_word).
 
 -export([length_of_last_word/1]).

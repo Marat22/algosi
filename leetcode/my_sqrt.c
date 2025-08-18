@@ -1,3 +1,4 @@
+// https://leetcode.com/problems/sqrtx/
 #include<stdio.h>
 #include<math.h>
 
