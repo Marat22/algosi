@@ -1,4 +1,7 @@
-# Top 75 LeetCode Questions
+# Leetcode
+[My leetcode profile](https://leetcode.com/u/maratsaifutdinov22/).
+
+## Top 75 LeetCode Questions
 
 - [x] Array
     - [x] [Two Sum](https://leetcode.com/problems/two-sum/)
@@ -96,7 +99,7 @@
     - [ ] [Top K Frequent Elements](https://leetcode.com/problems/top-k-frequent-elements/)
     - [ ] [Find Median from Data Stream](https://leetcode.com/problems/find-median-from-data-stream/)
 
-# Notes
+## Notes
 I think I should go back and solve this questions again:
 - [ ] Array
   - [ ] [3Sum](https://leetcode.com/problems/3sum/). Cheated for this question.
