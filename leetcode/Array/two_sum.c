@@ -1,3 +1,5 @@
+#include "../uthash.h"
+
 // https://leetcode.com/problems/two-sum/
 
 typedef struct {
@@ -20,7 +22,7 @@ IntIntHash *findItem(IntIntHash **hash_table, int key) {
 }
 
 
-int* twoSum(int* nums, int numsSize, int target, int* returnSize) {
+int* twoSum(int* nums, int numsSize, int target, int* returnSize) { 
     IntIntHash *hash_table = NULL;
     for (int i = 0; i < numsSize; i++) {
         IntIntHash *item = findItem(&hash_table, target - nums[i]);

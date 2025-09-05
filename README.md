@@ -13,7 +13,7 @@
     - [x] [Container With Most Water](https://leetcode.com/problems/container-with-most-water/)
 
 - [ ] Binary
-    - [ ] [Sum of Two Integers](https://leetcode.com/problems/sum-of-two-integers/)
+    - [x] [Sum of Two Integers](https://leetcode.com/problems/sum-of-two-integers/)
     - [ ] [Number of 1 Bits](https://leetcode.com/problems/number-of-1-bits/)
     - [ ] [Counting Bits](https://leetcode.com/problems/counting-bits/)
     - [ ] [Missing Number](https://leetcode.com/problems/missing-number/)
@@ -95,6 +95,14 @@
     - [ ] [Merge K Sorted Lists](https://leetcode.com/problems/merge-k-sorted-lists/)
     - [ ] [Top K Frequent Elements](https://leetcode.com/problems/top-k-frequent-elements/)
     - [ ] [Find Median from Data Stream](https://leetcode.com/problems/find-median-from-data-stream/)
+
+# Notes
+I think I should go back and solve this questions again:
+- [ ] Array
+  - [ ] [3Sum](https://leetcode.com/problems/3sum/). Cheated for this question.
+  - [ ] [Maximum Product Subarray](https://leetcode.com/problems/maximum-product-subarray/)
+- [ ] Binary
+    - [ ] [Sum of Two Integers](https://leetcode.com/problems/sum-of-two-integers/). Cheated for this question.
 
 # Data Structures Implementations
 - [x] Linked list
