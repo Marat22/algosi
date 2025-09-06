@@ -110,6 +110,8 @@ I think I should go back and solve this questions again:
 # Sorting algorithms
 [Habr Article](https://habr.com/ru/companies/selectel/articles/851206/?ysclid=mf84ivfgd5676821158)
 
+[More **advanced** sorting algorithms](https://deepwiki.com/itcharge/LeetCode-Py/3.1-sorting-algorithms)
+
 Algorithms:
 - [ ] Bubble Sort
 - [ ] [Insertion Sort List](https://leetcode.com/problems/insertion-sort-list/description/)
@@ -119,6 +121,9 @@ Algorithms:
 - [ ] Merge Sort
 
 # Data Structures Implementations
+[Cool Article](https://deepwiki.com/itcharge/LeetCode-Py/2-data-structures)
+
+Data Structures:
 - [x] Linked list
 - [ ] HashMap
 - [ ] Queue
