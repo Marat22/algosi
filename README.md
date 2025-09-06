@@ -99,6 +99,14 @@
     - [ ] [Top K Frequent Elements](https://leetcode.com/problems/top-k-frequent-elements/)
     - [ ] [Find Median from Data Stream](https://leetcode.com/problems/find-median-from-data-stream/)
 
+## Notes
+I think I should go back and solve this questions again:
+- [ ] Array
+  - [ ] [3Sum](https://leetcode.com/problems/3sum/). Cheated for this question.
+  - [ ] [Maximum Product Subarray](https://leetcode.com/problems/maximum-product-subarray/)
+- [ ] Binary
+    - [ ] [Sum of Two Integers](https://leetcode.com/problems/sum-of-two-integers/). Cheated for this question.
+
 # Sorting algorithms
 [Habr Article](https://habr.com/ru/companies/selectel/articles/851206/?ysclid=mf84ivfgd5676821158)
 
@@ -109,14 +117,6 @@ Algorithms:
 - [ ] Heap Sort
 - [ ] Quick Sort
 - [ ] Merge Sort
-
-## Notes
-I think I should go back and solve this questions again:
-- [ ] Array
-  - [ ] [3Sum](https://leetcode.com/problems/3sum/). Cheated for this question.
-  - [ ] [Maximum Product Subarray](https://leetcode.com/problems/maximum-product-subarray/)
-- [ ] Binary
-    - [ ] [Sum of Two Integers](https://leetcode.com/problems/sum-of-two-integers/). Cheated for this question.
 
 # Data Structures Implementations
 - [x] Linked list
