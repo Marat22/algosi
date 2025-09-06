@@ -99,6 +99,17 @@
     - [ ] [Top K Frequent Elements](https://leetcode.com/problems/top-k-frequent-elements/)
     - [ ] [Find Median from Data Stream](https://leetcode.com/problems/find-median-from-data-stream/)
 
+# Sorting algorithms
+[Habr Article](https://habr.com/ru/companies/selectel/articles/851206/?ysclid=mf84ivfgd5676821158)
+
+Algorithms:
+- [ ] Bubble Sort
+- [ ] [Insertion Sort List](https://leetcode.com/problems/insertion-sort-list/description/)
+- [ ] Selection Sort
+- [ ] Heap Sort
+- [ ] Quick Sort
+- [ ] Merge Sort
+
 ## Notes
 I think I should go back and solve this questions again:
 - [ ] Array
