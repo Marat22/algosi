@@ -24,7 +24,7 @@
 
 - [ ] Dynamic Programming
     - [x] [Climbing Stairs](https://leetcode.com/problems/climbing-stairs/)
-    - [ ] [Coin Change](https://leetcode.com/problems/coin-change/)
+    - [x] [Coin Change](https://leetcode.com/problems/coin-change/)
     - [ ] [Longest Increasing Subsequence](https://leetcode.com/problems/longest-increasing-subsequence/)
     - [ ] [Longest Common Subsequence](https://leetcode.com/problems/longest-common-subsequence/) <!-- Link added based on standard LeetCode URL -->
     - [ ] [Word Break](https://leetcode.com/problems/word-break/)
@@ -106,6 +106,8 @@ I think I should go back and solve this questions again:
   - [ ] [Maximum Product Subarray](https://leetcode.com/problems/maximum-product-subarray/)
 - [ ] Binary
     - [ ] [Sum of Two Integers](https://leetcode.com/problems/sum-of-two-integers/). Cheated for this question.
+- [ ] Dynamic Programming
+    - [ ] [Coin Change](https://leetcode.com/problems/coin-change/)
 
 # Sorting algorithms
 [Habr Article](https://habr.com/ru/companies/selectel/articles/851206/?ysclid=mf84ivfgd5676821158)
