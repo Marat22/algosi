@@ -26,7 +26,7 @@
     - [x] [Climbing Stairs](https://leetcode.com/problems/climbing-stairs/)
     - [x] [Coin Change](https://leetcode.com/problems/coin-change/)
     - [ ] [Longest Increasing Subsequence](https://leetcode.com/problems/longest-increasing-subsequence/)
-    - [ ] [Longest Common Subsequence](https://leetcode.com/problems/longest-common-subsequence/) <!-- Link added based on standard LeetCode URL -->
+    - [ ] [Longest Common Subsequence](https://leetcode.com/problems/longest-common-subsequence/)
     - [ ] [Word Break](https://leetcode.com/problems/word-break/)
     - [ ] [Combination Sum IV](https://leetcode.com/problems/combination-sum-iv/)
     - [ ] [House Robber](https://leetcode.com/problems/house-robber/)
@@ -123,9 +123,17 @@ Algorithms:
 - [ ] Merge Sort
 
 # Data Structures Implementations
-[Cool Article](https://deepwiki.com/itcharge/LeetCode-Py/2-data-structures)
+[Cool Article about data structures](https://deepwiki.com/itcharge/LeetCode-Py/2-data-structures)
 
 Data Structures:
 - [x] Linked list
 - [ ] HashMap
 - [ ] Queue
+
+# Cool sources
+- [ ] [visualgo (supercool visualizations)](https://visualgo.net/en/list?slide=1)
+- [ ] [Micheal Sambol (short videos about data structures)](https://www.youtube.com/@MichaelSambol/videos)
+- [ ] [Abdul Bari (videos about algorithms and data structures)](https://www.youtube.com/@abdul_bari)
+- [ ] [Leetcode patterns](https://seanprashad.com/leetcode-patterns/)
+- [ ] [algo.monster (some algo course)](https://algo.monster/)
+- [ ] 
