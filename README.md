@@ -19,7 +19,8 @@
     - [x] [Sum of Two Integers](https://leetcode.com/problems/sum-of-two-integers/)
     - [x] [Number of 1 Bits](https://leetcode.com/problems/number-of-1-bits/)
     - [x] [Counting Bits](https://leetcode.com/problems/counting-bits/)
-    - [ ] [Missing Number](https://leetcode.com/problems/missing-number/)
+    - [x] [Missing Number](https://leetcode.com/problems/missing-number/)
+        - Actually used brute force approach: just sorted array and iterated until found a gap.
     - [ ] [Reverse Bits](https://leetcode.com/problems/reverse-bits/)
 
 - [ ] Dynamic Programming
@@ -109,6 +110,10 @@ I think I should go back and solve this questions again:
     - [ ] [Sum of Two Integers](https://leetcode.com/problems/sum-of-two-integers/). Cheated for this question.
 - [ ] Dynamic Programming
     - [ ] [Coin Change](https://leetcode.com/problems/coin-change/)
+    - [ ] [Longest Increasing Subsequence](https://leetcode.com/problems/longest-increasing-subsequence/)
+
+Also, I think I can find better approach for this problems:
+- [ ] [Missing Number](https://leetcode.com/problems/missing-number/)
 
 # Sorting algorithms
 [Habr Article](https://habr.com/ru/companies/selectel/articles/851206/?ysclid=mf84ivfgd5676821158)
