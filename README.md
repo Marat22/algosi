@@ -21,7 +21,8 @@
     - [x] [Counting Bits](https://leetcode.com/problems/counting-bits/)
     - [x] [Missing Number](https://leetcode.com/problems/missing-number/)
         - Actually used brute force approach: just sorted array and iterated until found a gap.
-    - [ ] [Reverse Bits](https://leetcode.com/problems/reverse-bits/)
+    - [x] [Reverse Bits](https://leetcode.com/problems/reverse-bits/)
+        - **Don't forget** that **to set last bit** of 32-bits signed integer **you need to do** `num |= 1 << 31`, NOT `num |= 1 << 32`. And to set first bit -> `num |= 1 << 0`.
 
 - [ ] Dynamic Programming
     - [x] [Climbing Stairs](https://leetcode.com/problems/climbing-stairs/)
