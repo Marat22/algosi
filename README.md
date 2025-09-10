@@ -56,7 +56,8 @@
     - [ ] [Meeting Rooms II (Premium)](https://leetcode.com/problems/meeting-rooms-ii/)
 
 - [ ] Linked List
-    - [ ] [Reverse Linked List](https://leetcode.com/problems/reverse-linked-list/)
+    - [x] [Reverse Linked List](https://leetcode.com/problems/reverse-linked-list/)
+      - Each `value` of reversed list node is `value` of head, each `next` - previously accumulated reversed list
     - [ ] [Detect Cycle in a Linked List](https://leetcode.com/problems/linked-list-cycle/)
     - [x] [Merge Two Sorted Lists](https://leetcode.com/problems/merge-two-sorted-lists/)
     - [ ] [Merge K Sorted Lists](https://leetcode.com/problems/merge-k-sorted-lists/)
