@@ -15,7 +15,7 @@
     - [x] [3Sum](https://leetcode.com/problems/3sum/)
     - [x] [Container With Most Water](https://leetcode.com/problems/container-with-most-water/)
 
-- [ ] Binary
+- [x] Binary
     - [x] [Sum of Two Integers](https://leetcode.com/problems/sum-of-two-integers/)
     - [x] [Number of 1 Bits](https://leetcode.com/problems/number-of-1-bits/)
     - [x] [Counting Bits](https://leetcode.com/problems/counting-bits/)
@@ -29,7 +29,11 @@
     - [x] [Coin Change](https://leetcode.com/problems/coin-change/)
     - [x] [Longest Increasing Subsequence](https://leetcode.com/problems/longest-increasing-subsequence/)
         - O(n^2) solution: find best solution for nums[-1], nums[-2], nums[-3]... to find best solution for nums[-3] you can reuse calculations of nums[-1] and nums[-2].
-    - [ ] [Longest Common Subsequence](https://leetcode.com/problems/longest-common-subsequence/)
+    - [x] [Longest Common Subsequence](https://leetcode.com/problems/longest-common-subsequence/)
+        - O(n*m) Bottom Up: 
+          - Make matrix `n` x `m`. Find best solution for `text1[n-1:]` and `text2[m-1:]`, then to `text1[n-2:]` and `text2[m-1:]`, ...
+          - If `text1[a]` == `text2[b]`, then best solution for `text1[a:]` and `text2[b:]` is equal to best solution for `text1[a+1:]` and `text2[b+1:]`
+          - Otherwise, the best solution is MAX(best for `text1[a+1:]` and `text2[b:]`, best for `text1[a:]` and `text2[b+1:]`)
     - [ ] [Word Break](https://leetcode.com/problems/word-break/)
     - [ ] [Combination Sum IV](https://leetcode.com/problems/combination-sum-iv/)
     - [ ] [House Robber](https://leetcode.com/problems/house-robber/)
@@ -113,6 +117,7 @@ I think I should go back and solve this questions again:
 - [ ] Dynamic Programming
     - [ ] [Coin Change](https://leetcode.com/problems/coin-change/)
     - [ ] [Longest Increasing Subsequence](https://leetcode.com/problems/longest-increasing-subsequence/)
+    - [ ] [Longest Common Subsequence](https://leetcode.com/problems/longest-common-subsequence/). Cheated.
 
 Also, I think I can find better approach for this problems:
 - [ ] [Missing Number](https://leetcode.com/problems/missing-number/)
