@@ -122,6 +122,9 @@ I think I should go back and solve this questions again:
 Also, I think I can find better approach for this problems:
 - [ ] [Missing Number](https://leetcode.com/problems/missing-number/)
 
+## Divide and conquer
+TODO: also need to solve some **divide and conquer** problems
+
 # Sorting algorithms
 [Habr Article](https://habr.com/ru/companies/selectel/articles/851206/?ysclid=mf84ivfgd5676821158)
 
