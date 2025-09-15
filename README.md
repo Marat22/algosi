@@ -30,11 +30,21 @@
     - [x] [Longest Increasing Subsequence](https://leetcode.com/problems/longest-increasing-subsequence/)
         - O(n^2) solution: find best solution for nums[-1], nums[-2], nums[-3]... to find best solution for nums[-3] you can reuse calculations of nums[-1] and nums[-2].
     - [x] [Longest Common Subsequence](https://leetcode.com/problems/longest-common-subsequence/)
-        - O(n*m) Bottom Up: 
+        - **O(n*m) Bottom Up**: 
           - Make matrix `n` x `m`. Find best solution for `text1[n-1:]` and `text2[m-1:]`, then to `text1[n-2:]` and `text2[m-1:]`, ...
           - If `text1[a]` == `text2[b]`, then best solution for `text1[a:]` and `text2[b:]` is equal to best solution for `text1[a+1:]` and `text2[b+1:]`
           - Otherwise, the best solution is MAX(best for `text1[a+1:]` and `text2[b:]`, best for `text1[a:]` and `text2[b+1:]`)
-    - [ ] [Word Break](https://leetcode.com/problems/word-break/)
+    - [x] [Word Break](https://leetcode.com/problems/word-break/)
+      - **O(n\*m\*n) Top Down**:
+        - If we know that we can reach `s[i]` with words from wordDict, then we find all `s[n]` (n>i) that we can reach with words from wordDict and set `dp[n]=true`
+        - 
+        - Make `dp[len(s)+1]`. Set `dp[0]=0`.
+        - Iterate `i in range(0, len(s))`
+          - if `dp[i] == true`
+            - iterate through wordDict and if `s[i:].startswith(wordDict[j])`, then set `dp[i + len(wordDict[j])] = true`
+        - Return `dp[len(s)+1]`
+      - **O(n\*m\*n) Bottom Up**:
+        - If `s[i].startswith(wordDict[j])` and `dp[i+len(wordDict[j])] == true`, then `dp[i] == true`
     - [ ] [Combination Sum IV](https://leetcode.com/problems/combination-sum-iv/)
     - [ ] [House Robber](https://leetcode.com/problems/house-robber/)
     - [ ] [House Robber II](https://leetcode.com/problems/house-robber-ii/)
@@ -118,6 +128,7 @@ I think I should go back and solve this questions again:
     - [ ] [Coin Change](https://leetcode.com/problems/coin-change/)
     - [ ] [Longest Increasing Subsequence](https://leetcode.com/problems/longest-increasing-subsequence/)
     - [ ] [Longest Common Subsequence](https://leetcode.com/problems/longest-common-subsequence/). Cheated.
+    - [ ] [Word Break](https://leetcode.com/problems/word-break/). Cheaaated. However, i watched Bottom-Up solution, but implemented Top-down, so it's just half cheating
 
 Also, I think I can find better approach for this problems:
 - [ ] [Missing Number](https://leetcode.com/problems/missing-number/)
