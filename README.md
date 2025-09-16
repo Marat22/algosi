@@ -45,7 +45,10 @@
         - Return `dp[len(s)+1]`
       - **O(n\*m\*n) Bottom Up**:
         - If `s[i].startswith(wordDict[j])` and `dp[i+len(wordDict[j])] == true`, then `dp[i] == true`
-    - [ ] [Combination Sum IV](https://leetcode.com/problems/combination-sum-iv/)
+    - [x] [Combination Sum IV](https://leetcode.com/problems/combination-sum-iv/)
+      - **O(Target*N) Top Down**:
+        - Step by step find best solution for 0..Target (`CurrentTarget`) and save it to `dp` Map
+        - So, to calculate `dp[i]` you can use previous values `dp[i] += dp.get(CurrentTarget - Num, 0) for Num in Nums`
     - [ ] [House Robber](https://leetcode.com/problems/house-robber/)
     - [ ] [House Robber II](https://leetcode.com/problems/house-robber-ii/)
     - [ ] [Decode Ways](https://leetcode.com/problems/decode-ways/)
