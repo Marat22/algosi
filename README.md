@@ -49,7 +49,11 @@
       - **O(Target*N) Top Down**:
         - Step by step find best solution for 0..Target (`CurrentTarget`) and save it to `dp` Map
         - So, to calculate `dp[i]` you can use previous values `dp[i] += dp.get(CurrentTarget - Num, 0) for Num in Nums`
-    - [ ] [House Robber](https://leetcode.com/problems/house-robber/)
+    - [x] [House Robber](https://leetcode.com/problems/house-robber/)
+        - **O(n)**: Overall approach: 
+            1. `dp = nums`
+            2. `dp[i] += max(dp[i-2], dp[i-3])`
+            3. result is `max(dp[-1], dp[-2])`
     - [ ] [House Robber II](https://leetcode.com/problems/house-robber-ii/)
     - [ ] [Decode Ways](https://leetcode.com/problems/decode-ways/)
     - [ ] [Unique Paths](https://leetcode.com/problems/unique-paths/)
@@ -132,6 +136,7 @@ I think I should go back and solve this questions again:
     - [ ] [Longest Increasing Subsequence](https://leetcode.com/problems/longest-increasing-subsequence/)
     - [ ] [Longest Common Subsequence](https://leetcode.com/problems/longest-common-subsequence/). Cheated.
     - [ ] [Word Break](https://leetcode.com/problems/word-break/). Cheaaated. However, i watched Bottom-Up solution, but implemented Top-down, so it's just half cheating
+    - [ ] [Combination Sum IV](https://leetcode.com/problems/combination-sum-iv/). I cheated.
 
 Also, I think I can find better approach for this problems:
 - [ ] [Missing Number](https://leetcode.com/problems/missing-number/)
