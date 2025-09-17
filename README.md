@@ -145,6 +145,12 @@ I think I should go back and solve this questions again:
 Also, I think I can find better approach for this problems:
 - [ ] [Missing Number](https://leetcode.com/problems/missing-number/)
 
+## Other algorithms
+- [ ] [Designs](https://leetcode.com/problem-list/design/). There are some cool deisgns, explore them, I think it will help on interviews. 
+  - [ ] [LRU cache](https://leetcode.com/problems/lru-cache/description/)
+  - [ ] [Shuffle an Array](https://leetcode.com/problems/shuffle-an-array/description/)
+  - ... explore and find some other cool designs to implement
+
 ## Divide and conquer
 TODO: also need to solve some **divide and conquer** problems
 
@@ -163,6 +169,8 @@ Algorithms:
 
 # Data Structures Implementations
 [Cool Article about data structures](https://deepwiki.com/itcharge/LeetCode-Py/2-data-structures)
+
+Also, I think before implementing data structures it would be helpful to solve [designs on leetcode](https://leetcode.com/problem-list/design/)
 
 Data Structures:
 - [x] Linked list
