@@ -52,9 +52,13 @@
     - [x] [House Robber](https://leetcode.com/problems/house-robber/)
         - **O(n)**: Overall approach: 
             1. `dp = nums`
-            2. `dp[i] += max(dp[i-2], dp[i-3])`
-            3. result is `max(dp[-1], dp[-2])`
-    - [ ] [House Robber II](https://leetcode.com/problems/house-robber-ii/)
+            2. for i in range (len(nums) + 2)
+               1. `dp[i] += max(dp[i-2], dp[i-3])`
+            3. result is `dp[-1]`
+    - [x] [House Robber II](https://leetcode.com/problems/house-robber-ii/)
+      - **O(n)**:
+        - Use previous problem to solve this one
+        - `Result = max(orginal_rob(Nums[1:]), original_rob(Nums[:-1]))`
     - [ ] [Decode Ways](https://leetcode.com/problems/decode-ways/)
     - [ ] [Unique Paths](https://leetcode.com/problems/unique-paths/)
     - [ ] [Jump Game](https://leetcode.com/problems/jump-game/)
