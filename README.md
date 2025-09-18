@@ -59,7 +59,17 @@
       - **O(n)**:
         - Use previous problem to solve this one
         - `Result = max(orginal_rob(Nums[1:]), original_rob(Nums[:-1]))`
-    - [ ] [Decode Ways](https://leetcode.com/problems/decode-ways/)
+    - [x] [Decode Ways](https://leetcode.com/problems/decode-ways/)
+      - **O(n)**:
+        - pseudo code:
+            ```python
+            for i in range(0, len(str)): # this is general case (think about first letters)
+                dp[i] += dp[i-2] if i >= 2 and 1 <= int(s[i-1] + s[i]) <= 26 else 0
+                dp[i] += dp[i-1] if s[i] != '0' else 0
+            ```
+        - idea:
+          - if s[i] != '0', then it can represent letter, so to dp[i] we can add all variants of encoding s[:i] (because there is one way to get from s[i-1] to s[i])
+          - if 1 <= int(s[i-1] + s[i]) <= 26, then current and previous numbers can represent letters, so to dp[i] we can add all variants of encoding s[:i-1] (because there is one way to get from s[i-2] to s[i])
     - [ ] [Unique Paths](https://leetcode.com/problems/unique-paths/)
     - [ ] [Jump Game](https://leetcode.com/problems/jump-game/)
 
