@@ -80,10 +80,13 @@
             return [n-1][m-1]
             ```
         - idea:
-            - for every cell in first row *number of paths* is equal to one, so we make list [1] * n
-            - for next rows: *number of paths* is equal to *number of paths* for upper cell + *number of paths* for left cell
-            - return *number of paths* for last cell
-    - [ ] [Jump Game](https://leetcode.com/problems/jump-game/)
+          - for every cell in first row *number of paths* is equal to one, so we make list [1] * n
+          - for next rows: *number of paths* is equal to *number of paths* for upper cell + *number of paths* for left cell
+          - return *number of paths* for last cell
+    - [x] [Jump Game](https://leetcode.com/problems/jump-game/)
+      - **O(n)**:
+        - idea:
+          - while iterating through array, update `max_inx` value which stores maximum index you can reach. if `i > max_inx`, then return false. if `max_inx >= len(nums)-1`, return true.
 
 - [ ] Graph
     - [ ] [Clone Graph](https://leetcode.com/problems/clone-graph/)
@@ -175,6 +178,9 @@ Also, I think I can find better approach for this problems:
 
 ## Divide and conquer
 TODO: also need to solve some **divide and conquer** problems
+
+## Greedy
+TODO: also need to solve some **greedy** problems
 
 # Sorting algorithms
 [Habr Article](https://habr.com/ru/companies/selectel/articles/851206/?ysclid=mf84ivfgd5676821158)
