@@ -24,7 +24,7 @@
     - [x] [Reverse Bits](https://leetcode.com/problems/reverse-bits/)
         - **Don't forget** that **to set last bit** of 32-bits signed integer **you need to do** `num |= 1 << 31`, NOT `num |= 1 << 32`. And to set first bit -> `num |= 1 << 0`.
 
-- [ ] Dynamic Programming
+- [x] Dynamic Programming
     - [x] [Climbing Stairs](https://leetcode.com/problems/climbing-stairs/)
     - [x] [Coin Change](https://leetcode.com/problems/coin-change/)
     - [x] [Longest Increasing Subsequence](https://leetcode.com/problems/longest-increasing-subsequence/)
@@ -89,7 +89,12 @@
           - while iterating through array, update `max_inx` value which stores maximum index you can reach. if `i > max_inx`, then return false. if `max_inx >= len(nums)-1`, return true.
 
 - [ ] Graph
-    - [ ] [Clone Graph](https://leetcode.com/problems/clone-graph/)
+    - [x] [Clone Graph](https://leetcode.com/problems/clone-graph/)
+      - If `s == NULL`, then just return NULL
+      - Make `struct Node* arr[101]` to store all processed nodes
+      - Then iterate through neighbors nodes starting with s (DFS):
+        - If node is already in `arr`, then return it
+        - Otherwise, add node to `arr` and start to iterate though its neighbours... 
     - [ ] [Course Schedule](https://leetcode.com/problems/course-schedule/)
     - [ ] [Pacific Atlantic Water Flow](https://leetcode.com/problems/pacific-atlantic-water-flow/)
     - [ ] [Number of Islands](https://leetcode.com/problems/number-of-islands/)
