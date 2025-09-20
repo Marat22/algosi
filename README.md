@@ -95,7 +95,17 @@
       - Then iterate through neighbors nodes starting with s (DFS):
         - If node is already in `arr`, then return it
         - Otherwise, add node to `arr` and start to iterate though its neighbours... 
-    - [ ] [Course Schedule](https://leetcode.com/problems/course-schedule/)
+    - [x] [Course Schedule](https://leetcode.com/problems/course-schedule/)
+      - Make a dict `PreMap` and use course for key and list of prerequisites for value
+      - Make set `visited`
+      - `dfs` algorithm:
+        - If course in `visited`, then return False (because that means that we are in loop which means that to finish course you need to finish this course before which is impossible)
+        - If course in `PreMap` and prerequisites is empty list, then return True
+        - Add course to `visited` and run `dfs` through each prerequisites of current course.
+          - If at least one returns False -> also return False
+        - Remove current course from `visited`
+        - Set `PreMap[course]=[]` (we already checked that course, so no need to check it again)
+      - Run `dfs` for i in range(0, numCourses)
     - [ ] [Pacific Atlantic Water Flow](https://leetcode.com/problems/pacific-atlantic-water-flow/)
     - [ ] [Number of Islands](https://leetcode.com/problems/number-of-islands/)
     - [ ] [Longest Consecutive Sequence](https://leetcode.com/problems/longest-consecutive-sequence/)
@@ -171,6 +181,8 @@ I think I should go back and solve this questions again:
     - [ ] [Longest Common Subsequence](https://leetcode.com/problems/longest-common-subsequence/). Cheated.
     - [ ] [Word Break](https://leetcode.com/problems/word-break/). Cheaaated. However, i watched Bottom-Up solution, but implemented Top-down, so it's just half cheating
     - [ ] [Combination Sum IV](https://leetcode.com/problems/combination-sum-iv/). I cheated.
+- [ ] Graph
+    - [ ] [Course Schedule](https://leetcode.com/problems/course-schedule/). Cheated, didn't even rewrite in C or Erlang.
 
 Also, I think I can find better approach for this problems:
 - [ ] [Missing Number](https://leetcode.com/problems/missing-number/)
