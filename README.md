@@ -28,11 +28,25 @@
     - [x] [Climbing Stairs](https://leetcode.com/problems/climbing-stairs/)
     - [x] [Coin Change](https://leetcode.com/problems/coin-change/)
     - [x] [Longest Increasing Subsequence](https://leetcode.com/problems/longest-increasing-subsequence/)
-        - O(n^2) solution: find best solution for nums[-1], nums[-2], nums[-3]... to find best solution for nums[-3] you can reuse calculations of nums[-1] and nums[-2].
+        - **O(n^2) Bottom Up**: 
+          - dp[i] = longest combination for nums[i:]
+            - to get longest combination for nums[i:] we iterate through dp[:i+1] and nums[i:] to get max dp for num that is bigger than current (if nums[j] > curr then dp[i] = max(dp[i], 1+dp[j]))
+          - e.g. we have nums=[1,10,3,1,2]
+            - i = 4 (nums[i]=2)
+              - dp[4] = 1
+            - i = 3 (nums[i]=1)
+              - dp[3] = 2 (because nums[3] < nums[4])
+            - i = 2 (nums[i]=3)
+              - dp[2] = 2
+            - i = 1 (nums[i]=10)
+              - dp[1] = 1 (because nums[i+1:] are bigger than nums[i])
+            - i = 0 (nums[i]=1)
+              - dp[0] = 2
+          - and then we return max(dp)
     - [x] [Longest Common Subsequence](https://leetcode.com/problems/longest-common-subsequence/)
         - **O(n*m) Bottom Up**: 
           - Make matrix `n` x `m`. Find best solution for `text1[n-1:]` and `text2[m-1:]`, then to `text1[n-2:]` and `text2[m-1:]`, ...
-          - If `text1[a]` == `text2[b]`, then best solution for `text1[a:]` and `text2[b:]` is equal to best solution for `text1[a+1:]` and `text2[b+1:]`
+          - If `text1[a]` == `text2[b]`, then best solution for `text1[a:]` and `text2[b:]` is equal to 1 + best solution for `text1[a+1:]` and `text2[b+1:]`
           - Otherwise, the best solution is MAX(best for `text1[a+1:]` and `text2[b:]`, best for `text1[a:]` and `text2[b+1:]`)
     - [x] [Word Break](https://leetcode.com/problems/word-break/)
       - **O(n\*m\*n) Top Down**:
@@ -58,7 +72,7 @@
     - [x] [House Robber II](https://leetcode.com/problems/house-robber-ii/)
       - **O(n)**:
         - Use previous problem to solve this one
-        - `Result = max(orginal_rob(Nums[1:]), original_rob(Nums[:-1]))`
+        - `Result = max(original_rob(Nums[1:]), original_rob(Nums[:-1]))`
     - [x] [Decode Ways](https://leetcode.com/problems/decode-ways/)
       - **O(n)**:
         - pseudo code:
@@ -192,6 +206,7 @@ I think I should go back and solve this questions again:
     - [ ] [Combination Sum IV](https://leetcode.com/problems/combination-sum-iv/). I cheated.
 - [ ] Graph
     - [ ] [Course Schedule](https://leetcode.com/problems/course-schedule/). Cheated, didn't even rewrite in C or Erlang.
+    - [ ] [Pacific Atlantic Water Flow](https://leetcode.com/problems/pacific-atlantic-water-flow/). Even after watched explanation by NeetCode spent about 2 hours to implement. I surely need to come back to this.
 
 Also, I think I can find better approach for this problems:
 - [ ] [Missing Number](https://leetcode.com/problems/missing-number/)
