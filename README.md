@@ -106,7 +106,16 @@
         - Remove current course from `visited`
         - Set `PreMap[course]=[]` (we already checked that course, so no need to check it again)
       - Run `dfs` for i in range(0, numCourses)
-    - [ ] [Pacific Atlantic Water Flow](https://leetcode.com/problems/pacific-atlantic-water-flow/)
+    - [x] [Pacific Atlantic Water Flow](https://leetcode.com/problems/pacific-atlantic-water-flow/)
+      - Start from Pacific borders and iterate like this:
+        - If `r` not out of boundaries AND `c` not out of boundaries AND `(r,c)` not in `CanReachPacific` AND `heights[r][c]` <= `heights[prev_r][prev_c]`
+          - Add `(r,c)` to `CanReachPacific`
+          - Iterate through `(r+1,c)` 
+          - Iterate through `(r-1,c)` 
+          - Iterate through `(r,c+1)` 
+          - Iterate through `(r,c-1)` 
+      - Repeat same thing with Atlantic
+      - Find `CanReachPacific` and `CanReachAtlantic` intersections and return them
     - [ ] [Number of Islands](https://leetcode.com/problems/number-of-islands/)
     - [ ] [Longest Consecutive Sequence](https://leetcode.com/problems/longest-consecutive-sequence/)
     - [ ] [Alien Dictionary (Premium)](https://leetcode.com/problems/alien-dictionary/)
