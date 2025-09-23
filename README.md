@@ -130,7 +130,11 @@
           - Iterate through `(r,c-1)` 
       - Repeat same thing with Atlantic
       - Find `CanReachPacific` and `CanReachAtlantic` intersections and return them
-    - [ ] [Number of Islands](https://leetcode.com/problems/number-of-islands/)
+    - [x] [Number of Islands](https://leetcode.com/problems/number-of-islands/)
+      - with all r (0..gridSize) and c (0..gridColSize) combinations:
+        - if grid\[r\]\[c\] == 1  ->
+          - res += 1
+          - Set all cells of island to zero, so, we won't explore this island second time.
     - [ ] [Longest Consecutive Sequence](https://leetcode.com/problems/longest-consecutive-sequence/)
     - [ ] [Alien Dictionary (Premium)](https://leetcode.com/problems/alien-dictionary/)
     - [ ] [Graph Valid Tree (Premium)](https://leetcode.com/problems/graph-valid-tree/)
