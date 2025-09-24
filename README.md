@@ -135,7 +135,14 @@
         - if grid\[r\]\[c\] == 1  ->
           - res += 1
           - Set all cells of island to zero, so, we won't explore this island second time.
-    - [ ] [Longest Consecutive Sequence](https://leetcode.com/problems/longest-consecutive-sequence/)
+    - [x] [Longest Consecutive Sequence](https://leetcode.com/problems/longest-consecutive-sequence/)
+      - Make set `numsSet` with `nums`
+      - Iterate through `numsSet` and find begginging of sequence
+        - Set `length` to zero
+        - Start `while` loop (while num+length in numsSet)
+          - length++;
+        - Compare best length with this length
+        - Return best length
     - [ ] [Alien Dictionary (Premium)](https://leetcode.com/problems/alien-dictionary/)
     - [ ] [Graph Valid Tree (Premium)](https://leetcode.com/problems/graph-valid-tree/)
     - [ ] [Number of Connected Components in an Undirected Graph (Premium)](https://leetcode.com/problems/number-of-connected-components-in-an-undirected-graph/)
@@ -211,6 +218,7 @@ I think I should go back and solve this questions again:
 - [ ] Graph
     - [ ] [Course Schedule](https://leetcode.com/problems/course-schedule/). Cheated, didn't even rewrite in C or Erlang.
     - [ ] [Pacific Atlantic Water Flow](https://leetcode.com/problems/pacific-atlantic-water-flow/). Even after watched explanation by NeetCode spent about 2 hours to implement. I surely need to come back to this.
+    - [ ] [Longest Consecutive Sequence](https://leetcode.com/problems/longest-consecutive-sequence/)
 
 Also, I think I can find better approach for this problems:
 - [ ] [Missing Number](https://leetcode.com/problems/missing-number/)
