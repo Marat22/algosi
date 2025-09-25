@@ -143,7 +143,13 @@
           - length++;
         - Compare best length with this length
         - Return best length
-    - [ ] [Alien Dictionary (Premium)](https://leetcode.com/problems/alien-dictionary/)
+    - [x] [Alien Dictionary (Premium)](https://leetcode.com/problems/alien-dictionary/)
+      - Make a dict[char: set], where set includes `chars` bigger than `char`. e.g. if `["ab", "ac"]`, then dict should be `{"b": {"c"}}`
+      - Use post-order DFS to get the result
+        - Iterate through nodes until found graph with no further nodes. Add it to res. Then add its parents to res, then their parents...
+        - After iteration is done, reverse the result list
+        - IMPORTANT NOTE: if loop if found, then algorithm should return ""
+      - return reversed result   list
     - [ ] [Graph Valid Tree (Premium)](https://leetcode.com/problems/graph-valid-tree/)
     - [ ] [Number of Connected Components in an Undirected Graph (Premium)](https://leetcode.com/problems/number-of-connected-components-in-an-undirected-graph/)
 
