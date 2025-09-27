@@ -150,7 +150,20 @@
         - After iteration is done, reverse the result list
         - IMPORTANT NOTE: if loop if found, then algorithm should return ""
       - return reversed result   list
-    - [ ] [Graph Valid Tree (Premium)](https://leetcode.com/problems/graph-valid-tree/)
+    - [x] [Graph Valid Tree (Premium)](https://leetcode.com/problems/graph-valid-tree/)
+      - Make dict adj for each edge:
+        - adj[edge[0]].append(edge[1])
+        - adj[edge[1]].append(edge[0])
+      - make visited `set`
+      - Dfs:
+        - if element in visited: return False
+        - visited.add(element)
+        - iterate through neighbors (through adj[element])
+          - if neighbor != prevVal
+            - if (dfs(element=neighbor, prevVal=element, visited, nodes) == False): return False
+        - return False
+      - return dfs(0, -1, visited, nodes) && n == len(visited)
+      - **Explanation:** during dfs we find loops (if element was visite -> return False) and by `n == len(visited)` we check that graph is interconnected 
     - [ ] [Number of Connected Components in an Undirected Graph (Premium)](https://leetcode.com/problems/number-of-connected-components-in-an-undirected-graph/)
 
 - [ ] Interval
@@ -225,6 +238,8 @@ I think I should go back and solve this questions again:
     - [ ] [Course Schedule](https://leetcode.com/problems/course-schedule/). Cheated, didn't even rewrite in C or Erlang.
     - [ ] [Pacific Atlantic Water Flow](https://leetcode.com/problems/pacific-atlantic-water-flow/). Even after watched explanation by NeetCode spent about 2 hours to implement. I surely need to come back to this.
     - [ ] [Longest Consecutive Sequence](https://leetcode.com/problems/longest-consecutive-sequence/)
+    - [ ] [Alien Dictionary (Premium)](https://leetcode.com/problems/alien-dictionary/)
+    - [ ] [Graph Valid Tree (Premium)](https://leetcode.com/problems/graph-valid-tree/)
 
 Also, I think I can find better approach for this problems:
 - [ ] [Missing Number](https://leetcode.com/problems/missing-number/)
