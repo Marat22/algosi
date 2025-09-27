@@ -106,7 +106,7 @@
     - [x] [Clone Graph](https://leetcode.com/problems/clone-graph/)
       - If `s == NULL`, then just return NULL
       - Make `struct Node* arr[101]` to store all processed nodes
-      - Then iterate through neighbors nodes starting with s (DFS):
+      - Then iterate through neighbors nodes starting from s (DFS):
         - If node is already in `arr`, then return it
         - Otherwise, add node to `arr` and start to iterate though its neighbours... 
     - [x] [Course Schedule](https://leetcode.com/problems/course-schedule/)
@@ -151,19 +151,39 @@
         - IMPORTANT NOTE: if loop if found, then algorithm should return ""
       - return reversed result   list
     - [x] [Graph Valid Tree (Premium)](https://leetcode.com/problems/graph-valid-tree/)
-      - Make dict adj for each edge:
-        - adj[edge[0]].append(edge[1])
-        - adj[edge[1]].append(edge[0])
-      - make visited `set`
+      - There are 2 conditions for valid Tree:
+        - Graph should be interconnected
+        - Graph should not contain loops
+      - Make dict `adj` for each `edge` in `edges`:
+        - `adj[edge[0]].append(edge[1])`
+        - `adj[edge[1]].append(edge[0])`
+      - make `visited set`
       - Dfs:
-        - if element in visited: return False
-        - visited.add(element)
-        - iterate through neighbors (through adj[element])
-          - if neighbor != prevVal
-            - if (dfs(element=neighbor, prevVal=element, visited, nodes) == False): return False
-        - return False
+        - if `element` in `visited`: `return False` (**loop detection!**)
+        - `visited.add(element)`
+        - iterate through `neighbors` (through `adj[element]`)
+          - if `neighbor` != `prev_dfs_val`
+            - **Explanation of "`neighbor` != `prev_dfs_val`": `prev_dfs_val` (the edge from which we came to current edge) is in visited, so, if we run dfs for `prev_dfs_val` again, we will get false-positive loop detection and return False**
+            - if `(dfs(element=neighbor, prev_dfs_val=element, visited, nodes) == False)`: `return False`
+        - return True
+      - Note: **the main function should call `dfs` only once**, because if graph is interconnected, then you can find ALL edges starting from any edge in graph. For example:
+        - ```
+          Node1 - Node2 - Node4
+                        - Node5
+                - Node3
+          # from any node i can get to any node. For example, let's start from Node5:
+            - Node5->Node4->Node2->Node1->Node3
+          ```
+        - ```
+          Node1 - Node2 - Node4
+                        - Node5
+                - Node3
+          
+          Node7 - Node8
+          # we never can get to Node3 if we start from Node7 or Node8, 
+          ```
       - return dfs(0, -1, visited, nodes) && n == len(visited)
-      - **Explanation:** during dfs we find loops (if element was visite -> return False) and by `n == len(visited)` we check that graph is interconnected 
+      - **Explanation:** during dfs we find loops (if element was visited twice -> return False) and by `n == len(visited)` we check that graph is interconnected (if graph isn't interconnected -> `dfs` won't visit all edges)
     - [ ] [Number of Connected Components in an Undirected Graph (Premium)](https://leetcode.com/problems/number-of-connected-components-in-an-undirected-graph/)
 
 - [ ] Interval
