@@ -185,7 +185,34 @@
       - return dfs(0, -1, visited, nodes) && n == len(visited)
       - **Explanation:** during dfs we find loops (if element was visited twice -> return False) and by `n == len(visited)` we check that graph is interconnected (if graph isn't interconnected -> `dfs` won't visit all edges)
     - [ ] [Number of Connected Components in an Undirected Graph (Premium)](https://leetcode.com/problems/number-of-connected-components-in-an-undirected-graph/)
+        - Very similar to [Number of Islands](https://leetcode.com/problems/number-of-islands/)
+        - **O(V + E) (V - num of vertices, E - num of edges)**
+          - **Important note!** **The node may NOT BE PRESENT IN edges.** So, this situation is possible: `edges=[0,1], n = 4`, it can be illustrated like this:
+            ```
+            Node0 - Node1
 
+            Node2
+
+            Node3
+
+            Node4
+            ```
+          - So, `adj={i: [] for i in range(n)}`
+          - Then we fill `adj`. `for edge in edges`:
+            - `adj[edge[0]].append(edge[1])` 
+            - `adj[edge[1]].append(edge[0])`
+          - DFS algorithm (`args: int i, dict[int,list[int]] adj`):
+            - **Explanation: when we get i, we delete all nodes connected with i**
+            - If `i not in adj` (this node was already explored)
+            - `neighbors = adj.pop(i)`
+            - `for neighbor in neighbors`:
+              - `DFS(neighbor, adj)`
+          - `res = 0`
+          - `for i in range(0, n):`
+            - `if i in adj:` (if this group of connected nodes wasn't explored)
+              - `res+=1`
+              - `DFS(i, adj)` (remove all connected nodes)
+          - `return res`
 - [ ] Interval
     - [ ] [Insert Interval](https://leetcode.com/problems/insert-interval/)
     - [ ] [Merge Intervals](https://leetcode.com/problems/merge-intervals/)
@@ -264,11 +291,16 @@ I think I should go back and solve this questions again:
 Also, I think I can find better approach for this problems:
 - [ ] [Missing Number](https://leetcode.com/problems/missing-number/)
 
+
+
 ## Other algorithms
 - [ ] [Designs](https://leetcode.com/problem-list/design/). There are some cool deisgns, explore them, I think it will help on interviews. 
   - [ ] [LRU cache](https://leetcode.com/problems/lru-cache/description/)
   - [ ] [Shuffle an Array](https://leetcode.com/problems/shuffle-an-array/description/)
   - ... explore and find some other cool designs to implement
+
+## BFS
+- [ ] solve several algorithms with BFS, not DFS
 
 ## Divide and conquer
 TODO: also need to solve some **divide and conquer** problems
