@@ -102,7 +102,7 @@
         - idea:
           - while iterating through array, update `max_inx` value which stores maximum index you can reach. if `i > max_inx`, then return false. if `max_inx >= len(nums)-1`, return true.
 
-- [ ] Graph
+- [x] Graph
     - [x] [Clone Graph](https://leetcode.com/problems/clone-graph/)
       - If `s == NULL`, then just return NULL
       - Make `struct Node* arr[101]` to store all processed nodes
@@ -184,7 +184,7 @@
           ```
       - return dfs(0, -1, visited, nodes) && n == len(visited)
       - **Explanation:** during dfs we find loops (if element was visited twice -> return False) and by `n == len(visited)` we check that graph is interconnected (if graph isn't interconnected -> `dfs` won't visit all edges)
-    - [ ] [Number of Connected Components in an Undirected Graph (Premium)](https://leetcode.com/problems/number-of-connected-components-in-an-undirected-graph/)
+    - [x] [Number of Connected Components in an Undirected Graph (Premium)](https://leetcode.com/problems/number-of-connected-components-in-an-undirected-graph/)
         - Very similar to [Number of Islands](https://leetcode.com/problems/number-of-islands/)
         - **O(V + E) (V - num of vertices, E - num of edges)**
           - **Important note!** **The node may NOT BE PRESENT IN edges.** So, this situation is possible: `edges=[0,1], n = 4`, it can be illustrated like this:
@@ -214,7 +214,17 @@
               - `DFS(i, adj)` (remove all connected nodes)
           - `return res`
 - [ ] Interval
-    - [ ] [Insert Interval](https://leetcode.com/problems/insert-interval/)
+    - [x] [Insert Interval](https://leetcode.com/problems/insert-interval/)
+      - **O(n):**
+        - [My explanation on leetcode](https://leetcode.com/problems/insert-interval/solutions/7231294/erlangpython-explanation-mem-on-time-on-skvbr/)
+        - Input interval consists of 3 parts (but sometimes **not all parts are present**):
+
+          | |       Part1      |  Part2  |    Part3   | 
+          |-  |       -      |  -  |    -   | 
+          | **Condition** |       `Intervals[i][1] < NewInterval[0]`      |  `NOT Part1 AND NOT Part3` |   `NewInterval[1] < Intervals[i][0]`  | 
+          | **Action** | `res.add(Intervals[i])` | `NewInterval = [min(NewInterval[0], Interval[i][0])`, <br/> `max(NewInterval[1], Interval[i][1])]` | `res.add(NewInterval)`, **RETURN** `res + Intervals[i:]` |
+          |**Explanation**| We need all intervals that are smaller than NewInterval, so add all of them | We merge overlapping intervals | We insert NewInterval just before the part where all intervals are bigger than NewInterval |
+
     - [ ] [Merge Intervals](https://leetcode.com/problems/merge-intervals/)
     - [ ] [Non-overlapping Intervals](https://leetcode.com/problems/non-overlapping-intervals/)
     - [ ] [Meeting Rooms (Premium)](https://leetcode.com/problems/meeting-rooms/)
