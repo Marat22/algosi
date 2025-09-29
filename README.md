@@ -224,8 +224,18 @@
           | **Condition** |       `Intervals[i][1] < NewInterval[0]`      |  `NOT Part1 AND NOT Part3` |   `NewInterval[1] < Intervals[i][0]`  | 
           | **Action** | `res.add(Intervals[i])` | `NewInterval = [min(NewInterval[0], Interval[i][0])`, <br/> `max(NewInterval[1], Interval[i][1])]` | `res.add(NewInterval)`, **RETURN** `res + Intervals[i:]` |
           |**Explanation**| We need all intervals that are smaller than NewInterval, so add all of them | We merge overlapping intervals | We insert NewInterval just before the part where all intervals are bigger than NewInterval |
-
-    - [ ] [Merge Intervals](https://leetcode.com/problems/merge-intervals/)
+      - *Possible optimizations*:
+        - It is possible to solve this problem *in-place* (not create new list, but update input list). It would be **O(1) space complexity** 
+        - Also, with *binary search* it is possible to find all three parts. It would be **O(log n) time complexity**.
+    - [x] [Merge Intervals](https://leetcode.com/problems/merge-intervals/)
+      - **time - O(Nlogn), space - O(N)**
+        - Sort input `intervals`
+        - Initialize integers `Start, End` = `interval[0][1], interval[0][1]`
+        - Iterate through `intervals`:
+          - if `intervals[i][0] <= Start` -> `End = MAX(End, intervals[i])`
+          - else -> add `[Start, End] to res`, set `Start, End = intervals[i][0], intervals[i][1]`
+        - add `[Start, End] to res`
+        - return `res`
     - [ ] [Non-overlapping Intervals](https://leetcode.com/problems/non-overlapping-intervals/)
     - [ ] [Meeting Rooms (Premium)](https://leetcode.com/problems/meeting-rooms/)
     - [ ] [Meeting Rooms II (Premium)](https://leetcode.com/problems/meeting-rooms-ii/)
