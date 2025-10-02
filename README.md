@@ -328,6 +328,11 @@ TODO: also need to solve some **divide and conquer** problems
 ## Greedy
 TODO: also need to solve some **greedy** problems
 
+# Yandex Trainings
+- [1_E_increment](https://contest.yandex.ru/contest/80939/problems/E/)
+  - for some `z`: if `n mod 10` = `z`, then after `I` iterations `n mod 10` = `z` again. You need to find frequency of such repeations and interval between first and second occurances to calculate the rest.
+
+
 # Sorting algorithms
 [Habr Article](https://habr.com/ru/companies/selectel/articles/851206/?ysclid=mf84ivfgd5676821158)
 
