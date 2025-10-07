@@ -353,7 +353,9 @@ TODO: also need to solve some **greedy** problems
   - take any problems until the len(res) == k 
 - [1_E_increment](https://contest.yandex.ru/contest/80939/problems/E/)
   - for some `z`: if `n mod 10` = `z`, then after `I` iterations `n mod 10` = `z` again. You need to find frequency of such repeations and interval between first and second occurances to calculate the rest.
-- [1_G_5_sequence](https://contest.yandex.ru/contest/80939/problems/G/)
+- [1_F_plus_minus_question](https://contest.yandex.ru/contest/80939/problems/F/)
+  - Calculate biggest row sum and smallest col sum assuming that `?` is `+` for rows and `?` is `-` for cols. However, **NOTICE** that if `grid[i][j]` = `?`, then 2 should be extracted from `diff`.
+- [1_G_5_sequence](https://contest.yandex.ru/contes t/80939/problems/G/)
   - **O(i*j)**:
     - for each `(i,j)` save:
       - vertical length `(curRow[j].vert = prevRow[j].vert + 1)`,
