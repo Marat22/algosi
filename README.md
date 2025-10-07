@@ -353,6 +353,14 @@ TODO: also need to solve some **greedy** problems
   - take any problems until the len(res) == k 
 - [1_E_increment](https://contest.yandex.ru/contest/80939/problems/E/)
   - for some `z`: if `n mod 10` = `z`, then after `I` iterations `n mod 10` = `z` again. You need to find frequency of such repeations and interval between first and second occurances to calculate the rest.
+- [1_G_5_sequence](https://contest.yandex.ru/contest/80939/problems/G/)
+  - **O(i*j)**:
+    - for each `(i,j)` save:
+      - vertical length `(curRow[j].vert = prevRow[j].vert + 1)`,
+      - left to right diagonal length `(curRow[i].from_left_to_right =  prevRow[i-1].from_left_to_right +1)`,
+      - right to left diagonal length,
+      - horizontal length (using `curRow[i-1]`).
+      - If some `length == 5`, then print Yes and stop program. If `length == 5` never happened -> print No
 
 
 # Sorting algorithms
