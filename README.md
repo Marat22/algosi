@@ -329,6 +329,20 @@ TODO: also need to solve some **divide and conquer** problems
 TODO: also need to solve some **greedy** problems
 
 # Yandex Trainings
+- [A_mushrooms](https://contest.yandex.ru/contest/80939/problems/A/)
+  - **O(n)**:
+    1. find vasya's and masha's sum
+    2. find vasya's mushrom with smallest weight and masha's mushroom with biggest weight
+    3. if masha's biggest mushroom is bigger than smallest vasya's mushroom, then give mushroom to vasya
+- [1_B_mother](https://contest.yandex.ru/contest/80939/problems/B/)
+  - **O(1)**
+    - to solve this task you need dfs or bfs
+    - from current state you should try to any possible next_state (if next_state is not in path)
+    - if both items are at home -> time = min(best_time, time)
+    - state should consist of these elements:
+      - curr_location ('d', 'p', 's')
+      - items in hands
+      - items at home 
 - [1_E_increment](https://contest.yandex.ru/contest/80939/problems/E/)
   - for some `z`: if `n mod 10` = `z`, then after `I` iterations `n mod 10` = `z` again. You need to find frequency of such repeations and interval between first and second occurances to calculate the rest.
 
