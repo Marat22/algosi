@@ -363,6 +363,10 @@ TODO: also need to solve some **greedy** problems
       - right to left diagonal length,
       - horizontal length (using `curRow[i-1]`).
       - If some `length == 5`, then print Yes and stop program. If `length == 5` never happened -> print No
+- [2_A_ball]
+  - **O(i)**:
+    - `steps[0] = 0, steps[1] = 1, steps[2] = 2, steps[3] = 4, steps[i] = steps[i-3] + steps[i-2] + steps[i-1]`
+    - `return steps[N]`
 
 
 # Sorting algorithms
