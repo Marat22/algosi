@@ -348,6 +348,9 @@ TODO: also need to solve some **greedy** problems
     - you can't replace "a" with char "a", so **for each "a" (or any other letter) the number of combinations is the same**.
     - number of combinations in "aabc" is (qty of a) * (qty of other letters), so for "a" it would be 2 * 2 (**b**a**a**c, a**ba**c, **c**ab**a**, a***c***b**a**). then do the same with "bc", then with "c"
     - and don't forget to add 1 to res, because we also should include original password
+- [1_D_contest](https://contest.yandex.ru/contest/80939/problems/D/)
+  - take at least one problem from each theme
+  - take any problems until the len(res) == k 
 - [1_E_increment](https://contest.yandex.ru/contest/80939/problems/E/)
   - for some `z`: if `n mod 10` = `z`, then after `I` iterations `n mod 10` = `z` again. You need to find frequency of such repeations and interval between first and second occurances to calculate the rest.
 
