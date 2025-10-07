@@ -363,10 +363,25 @@ TODO: also need to solve some **greedy** problems
       - right to left diagonal length,
       - horizontal length (using `curRow[i-1]`).
       - If some `length == 5`, then print Yes and stop program. If `length == 5` never happened -> print No
-- [2_A_ball]
+- [2_A_ball](https://contest.yandex.ru/contest/80940/problems/H/)
   - **O(i)**:
     - `steps[0] = 0, steps[1] = 1, steps[2] = 2, steps[3] = 4, steps[i] = steps[i-3] + steps[i-2] + steps[i-1]`
     - `return steps[N]`
+- [2_H_matchsticks](https://contest.yandex.ru/contest/80940/problems/H/)
+  - **O(1)**:
+    - if **1** matchstick is left, then person wins:
+      - he wins (can remove 1 last stick)
+    - if **2** matchsticks:
+      - win (can remove 2 last sticks)
+    - if **3** matchsticks:
+      - win (can remove 3 last sticks)
+    - if **4** matchsticks:
+      - loss (no matter how many matchsticks you take - opponent will win)
+    - if **5 or 6 or 7**:
+      - win (because can remove sticks and get 4 which means that opponent will lose)
+    - if **8**:
+      - loss (because can't remove enough sticks to get to number where opponent will lose)
+    - as we can see the if `N % 4 == 0`, then person loses
 
 
 # Sorting algorithms

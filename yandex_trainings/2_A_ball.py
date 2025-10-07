@@ -1,3 +1,5 @@
+# https://contest.yandex.ru/contest/80940/problems/H/
+
 N = int(input())
 
 steps = [0] * max(2+N, 4)
