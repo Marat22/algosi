@@ -367,6 +367,14 @@ TODO: also need to solve some **greedy** problems
   - **O(i)**:
     - `steps[0] = 0, steps[1] = 1, steps[2] = 2, steps[3] = 4, steps[i] = steps[i-3] + steps[i-2] + steps[i-1]`
     - `return steps[N]`
+- [2_B_river](https://contest.yandex.ru/contest/80940/problems/B/)
+  - ![explanation](README_images/2_B_yandex.png)
+  - **O(n)**:
+    - on each input[i] calc the best way to get to left side and to get to right side
+    - e.g. if input[i] == 'l', then
+        - best_l = min(prev_l + 1, prev_r+1)
+        - best_r = min(prev_l+1, prev_r)
+        - prev_l, prev_r = best_l, best_r
 - [2_D_dictionary](https://contest.yandex.ru/contest/80940/problems/D/)
   - **O(len(word) * len(word_dict))**:
     - every time when `word[i:].startswith(word_dict[j])`, we do this `dp[i + len(word_dict[j])].append(copy(dp[i][0]) + [j])`.
