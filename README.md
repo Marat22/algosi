@@ -367,6 +367,28 @@ TODO: also need to solve some **greedy** problems
   - **O(i)**:
     - `steps[0] = 0, steps[1] = 1, steps[2] = 2, steps[3] = 4, steps[i] = steps[i-3] + steps[i-2] + steps[i-1]`
     - `return steps[N]`
+- [2_D_dictionary](https://contest.yandex.ru/contest/80940/problems/D/)
+  - **O(len(word) * len(word_dict))**:
+    - every time when `word[i:].startswith(word_dict[j])`, we do this `dp[i + len(word_dict[j])].append(copy(dp[i][0]) + [j])`.
+    - e.g. we have input string "joja" and word_dict: "joj", "jo", "ja":
+      - dp = [[], [], [], [], []]
+      - i = 0 ("joja")
+        - j = 0 ("joj")
+          - "joja"[i:].startswith("joj"), so now dp becomes:
+            - dp = [[], [], [], [0], []]
+        - j = 1 ("jo")
+          - "joja"[i:].startswith("jo"), so now dp becomes:
+            - dp = [[], [], [1], [0], []]
+        - j = 2 ("ja")
+          - "joja"[i:].startswith("jo") is false, so we don't update dp
+      - i = 1 ("oja")
+        - there is no matching word from worddict for "joja"[i:]
+      - i = 2 ("ja")
+        - j = 2 ("ja")
+          - "joja"[i:].startswith("jo"), so now dp becomes:
+            - dp = [[], [], [1], [0], [1,2]]
+            - **STOP HERE**, because we already found solution: [1,2] ("jo ja")
+  - *Note: this can be solved O(len(word) * log(word_dict)) if we use binary search to find matching words from word_dict* 
 - [2_H_matchsticks](https://contest.yandex.ru/contest/80940/problems/H/)
   - **O(1)**:
     - if **1** matchstick is left, then person wins:
