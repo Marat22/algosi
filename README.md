@@ -412,7 +412,14 @@ TODO: also need to solve some **greedy** problems
     - if **8**:
       - loss (because can't remove enough sticks to get to number where opponent will lose)
     - as we can see the if `N % 4 == 0`, then person loses
-
+- [2_J_masquerade](https://contest.yandex.ru/contest/80940/problems/J/)
+  - **O(L * N * Fmax):**
+    - `dp[s][k] = best(Cost(k ,t) + dp[s-t][k-1] for t in 0..F[k])`
+      - so we calculate best cost for `s` meters and `k`th house using previous results
+    - however, sometimes `t` can be >= than `s`. In that case we do this: `dp[s][k] = min(dp[s][k], Cost(k, t))`
+      - so if the best variant is to just buy more or equal to `s` meters in shop `k`, then buy it in shop `k`
+    <!-- - `for s in range(L+1)` -->
+    <!-- - `dp[s][k] = best price for s meters and 0..k shops` -->
 
 # Sorting algorithms
 [Habr Article](https://habr.com/ru/companies/selectel/articles/851206/?ysclid=mf84ivfgd5676821158)
