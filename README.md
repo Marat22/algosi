@@ -405,6 +405,17 @@ TODO: also need to solve some **greedy** problems
          - `include = include = towers[i] + dp[i-K][0]`
          - `exclude = sorted((val, prev_vals) for val, prev_vals in dp[i-K+1:i+1])[-1]`
          - then we compare exclude and include and make decision
+- [2_F_game](https://contest.yandex.ru/contest/80940/problems/F/)
+  - **O(N):**
+    - if cur_line[i] is reachable:
+      - cur_line[i] = best_reachable_val_of_previous_raw + (1 if line[i] == 'C' else 0)
+    - else
+      - cur_line[i] = 0
+    - **IMPORTANT:** stop if next row in unreachable:
+      ```
+      WW.
+      .WW  # this one is unreachable
+      ``` 
 - [2_H_matchsticks](https://contest.yandex.ru/contest/80940/problems/H/)
   - **O(1)**:
     - if **1** matchstick is left, then person wins:
