@@ -397,6 +397,14 @@ TODO: also need to solve some **greedy** problems
             - dp = [[], [], [1], [0], [1,2]]
             - **STOP HERE**, because we already found solution: [1,2] ("jo ja")
   - *Note: this can be solved O(len(word) * log(word_dict)) if we use binary search to find matching words from word_dict* 
+- [2_E_tower](https://contest.yandex.ru/contest/80940/problems/E/)
+  - **O(N):**
+    - Solution can be divided in 2 steps:
+      1. make array `towers` where `tower[i]` is safety of tower which last column is `i`
+      2. make array `dp` where `dp[i][0]` = best solution of 0..i:
+         - `include = include = towers[i] + dp[i-K][0]`
+         - `exclude = sorted((val, prev_vals) for val, prev_vals in dp[i-K+1:i+1])[-1]`
+         - then we compare exclude and include and make decision
 - [2_H_matchsticks](https://contest.yandex.ru/contest/80940/problems/H/)
   - **O(1)**:
     - if **1** matchstick is left, then person wins:
