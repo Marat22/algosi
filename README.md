@@ -415,7 +415,13 @@ TODO: also need to solve some **greedy** problems
       ```
       WW.
       .WW  # this one is unreachable
-      ``` 
+      ```
+- [2_G_stairs](https://contest.yandex.ru/contest/80940/problems/G/)
+  - **O(N^3):**
+    - `dp[0][0] = 1`
+    - `dp[total][first_row]` = number of possible stairs, which consist of `total` cubes and which first row consists of `first_row` cubes  
+    - `dp[total][first_row] = dp[total-first_row][first_row-1] + dp[total-first_row][first_row-2] + ... + dp[total-first_row][1]`. In this way we calculate all possible ways to place cubes when total sum is `total` and there are `first_row` cubes in first row
+    - But remember that `first_row <= total`
 - [2_H_matchsticks](https://contest.yandex.ru/contest/80940/problems/H/)
   - **O(1)**:
     - if **1** matchstick is left, then person wins:
