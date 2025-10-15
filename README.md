@@ -460,6 +460,10 @@ TODO: also need to solve some **greedy** problems
       ![alt text](README_images/3_B_3_yandex.png)
       - When exploring next neighbor of `2` we find that it is already explored. So, we found the result: 1-2 path + 2-3 path + best path to 3 = 1 + 1 + 1 = 3
       ![alt text](README_images/3_B_4_yandex.png)
+- [3_C_advertisement](https://contest.yandex.ru/contest/80941/problems/C/)
+  - **O(log(n) * n):**
+    - By binary search find matching k
+    - I used brute force algorithm to check if k matches. Since I used C++, I didn't really care about optimization of this thing 🙂
 
 ## Notes
 - [ ] 2_C intervals was hard, it would be good practice to solve it again
