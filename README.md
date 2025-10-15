@@ -439,6 +439,7 @@ TODO: also need to solve some **greedy** problems
     - if **8**:
       - loss (because can't remove enough sticks to get to number where opponent will lose)
     - as we can see the if `N % 4 == 0`, then person loses
+- [2_I_chain](https://contest.yandex.ru/contest/80940/problems/I/)
 - [2_J_masquerade](https://contest.yandex.ru/contest/80940/problems/J/)
   - **O(L * N * Fmax):**
     - `dp[s][k] = best(Cost(k ,t) + dp[s-t][k-1] for t in 0..F[k])`
