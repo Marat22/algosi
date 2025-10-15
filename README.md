@@ -448,6 +448,7 @@ TODO: also need to solve some **greedy** problems
       - so if the best variant is to just buy more or equal to `s` meters in shop `k`, then buy it in shop `k`
     <!-- - `for s in range(L+1)` -->
     <!-- - `dp[s][k] = best price for s meters and 0..k shops` -->
+- [3_A_shelf](https://contest.yandex.ru/contest/80941/problems/A/)
 - [3_B_from_dead_end_to_dead_end](https://contest.yandex.ru/contest/80941/problems/B/)
   - **i don't know complexity, but it's pretty fast:**
     - gradually simultaniously explore all nodes starting from leaf nodes. Example:
