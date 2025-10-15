@@ -471,6 +471,22 @@ TODO: also need to solve some **greedy** problems
     - with binary search find best `j` for this `target` **WHICH IS NOT EQUAL TO i**
     - if `val_i / val_j` is smaller than `best_ratio`, then save original indexes of those values as **best indexes**
   - print **best indexes**
+- [3_F_ancestor](https://contest.yandex.ru/contest/80941/problems/F/)
+  - Iterate through nodes. Before entering node, save current time, after exploring node, also save time. Like this:
+    - The tree:
+    ![alt text](README_images/3_F_1.png)
+    
+    - Save time before entering. Start with root node:
+    ![alt text](README_images/3_F_2.png)
+    - Explore children nodes:
+    ![alt text](README_images/3_F_3.png)
+
+    - Save time after node is processed:
+    ![alt text](README_images/3_F_4.png)
+
+    - Do the same with the rest
+    ![alt text](README_images/3_F_5.png)
+  - After we explored all nodes we can easily determine if the node is parent or not. `2nd` node is child of `1st`, because 1-10 interval includes 2-3. However `3rd` node is not parent of `2nd`, because 2-3 interval is **not** inside 4-9 interval.
 
 ## Notes
 - [ ] 2_C intervals was hard, it would be good practice to solve it again
