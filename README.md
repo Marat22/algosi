@@ -464,6 +464,13 @@ TODO: also need to solve some **greedy** problems
   - **O(log(n) * n):**
     - By binary search find matching k
     - I used brute force algorithm to check if k matches. Since I used C++, I didn't really care about optimization of this thing 🙂
+- [3_D_currency_exchange](https://contest.yandex.ru/contest/80941/problems/D/)
+  - sort `tables` and save values like this `[ [val1, orig_idx1],  [val2, orig_idx2] ]`. in this way it would be easier to determine original indexes for answer.
+  - iterate with `i` through sorted tables
+    - `target = P / val_i`
+    - with binary search find best `j` for this `target` **WHICH IS NOT EQUAL TO i**
+    - if `val_i / val_j` is smaller than `best_ratio`, then save original indexes of those values as **best indexes**
+  - print **best indexes**
 
 ## Notes
 - [ ] 2_C intervals was hard, it would be good practice to solve it again
