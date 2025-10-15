@@ -375,6 +375,8 @@ TODO: also need to solve some **greedy** problems
         - best_l = min(prev_l + 1, prev_r+1)
         - best_r = min(prev_l+1, prev_r)
         - prev_l, prev_r = best_l, best_r
+- [2_C_intervals](https://contest.yandex.ru/contest/80940/problems/C/)
+  - **O(N * log(n))**
 - [2_D_dictionary](https://contest.yandex.ru/contest/80940/problems/D/)
   - **O(len(word) * len(word_dict))**:
     - every time when `word[i:].startswith(word_dict[j])`, we do this `dp[i + len(word_dict[j])].append(copy(dp[i][0]) + [j])`.
