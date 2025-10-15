@@ -445,6 +445,20 @@ TODO: also need to solve some **greedy** problems
       - so if the best variant is to just buy more or equal to `s` meters in shop `k`, then buy it in shop `k`
     <!-- - `for s in range(L+1)` -->
     <!-- - `dp[s][k] = best price for s meters and 0..k shops` -->
+- [3_B_from_dead_end_to_dead_end](https://contest.yandex.ru/contest/80941/problems/B/)
+  - **i don't know complexity, but it's pretty fast:**
+    - gradually simultaniously explore all nodes starting from leaf nodes. Example:
+      - Tree:
+        ![3_B](README_images/3_B_1_yandex.png)
+      - Mark that the fastest way to get to leaf nodes takes 0 steps:
+      ![alt text](README_images/3_B_2_yandex.png)
+      - Mark neighbor nodes with fastest way to get to them:
+      ![alt text](README_images/3_B_3_yandex.png)
+      - When exploring next neighbor of `2` we find that it is already explored. So, we found the result: 1-2 path + 2-3 path + best path to 3 = 1 + 1 + 1 = 3
+      ![alt text](README_images/3_B_4_yandex.png)
+
+## Notes
+- [ ] 2_C intervals was hard, it would be good practice to solve it again
 
 # Sorting algorithms
 [Habr Article](https://habr.com/ru/companies/selectel/articles/851206/?ysclid=mf84ivfgd5676821158)
