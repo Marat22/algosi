@@ -487,6 +487,7 @@ TODO: also need to solve some **greedy** problems
     - Do the same with the rest
     ![alt text](README_images/3_F_5.png)
   - After we explored all nodes we can easily determine if the node is parent or not. `2nd` node is child of `1st`, because 1-10 interval includes 2-3. However `3rd` node is not parent of `2nd`, because 2-3 interval is **not** inside 4-9 interval.
+- [3_G](https://contest.yandex.ru/contest/80941/problems/G/)
 
 ## Notes
 - [ ] 2_C intervals was hard, it would be good practice to solve it again
