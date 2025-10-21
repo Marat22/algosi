@@ -471,6 +471,7 @@ TODO: also need to solve some **greedy** problems
     - with binary search find best `j` for this `target` **WHICH IS NOT EQUAL TO i**
     - if `val_i / val_j` is smaller than `best_ratio`, then save original indexes of those values as **best indexes**
   - print **best indexes**
+- [3_E_feudalism](https://contest.yandex.ru/contest/80941/problems/E/)
 - [3_F_ancestor](https://contest.yandex.ru/contest/80941/problems/F/)
   - Iterate through nodes. Before entering node, save current time, after exploring node, also save time. Like this:
     - The tree:
