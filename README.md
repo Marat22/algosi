@@ -490,6 +490,8 @@ TODO: also need to solve some **greedy** problems
   - After we explored all nodes we can easily determine if the node is parent or not. `2nd` node is child of `1st`, because 1-10 interval includes 2-3. However `3rd` node is not parent of `2nd`, because 2-3 interval is **not** inside 4-9 interval.
 - [3_G_gravity](https://contest.yandex.ru/contest/80941/problems/G/)
 - [3_H_pickup](https://contest.yandex.ru/contest/80941/problems/H/)
+- [3_I_expression_tree](https://contest.yandex.ru/contest/80941/problems/I/)
+- [3_J_interviews](https://contest.yandex.ru/contest/80941/problems/J/)
 
 ## Notes
 - [ ] 2_C intervals was hard, it would be good practice to solve it again
