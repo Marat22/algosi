@@ -329,12 +329,12 @@ TODO: also need to solve some **divide and conquer** problems
 TODO: also need to solve some **greedy** problems
 
 # Yandex Trainings
-- [A_mushrooms](https://contest.yandex.ru/contest/80939/problems/A/)
+- [x] [A_mushrooms](https://contest.yandex.ru/contest/80939/problems/A/?lang=en)
   - **O(n)**:
     1. find vasya's and masha's sum
     2. find vasya's mushrom with smallest weight and masha's mushroom with biggest weight
     3. if masha's biggest mushroom is bigger than smallest vasya's mushroom, then give mushroom to vasya
-- [1_B_mother](https://contest.yandex.ru/contest/80939/problems/B/)
+- [x] [1_B_mother](https://contest.yandex.ru/contest/80939/problems/B/?lang=en)
   - **O(1)**
     - to solve this task you need dfs or bfs
     - from current state you should try to any possible next_state (if next_state is not in path)
@@ -343,19 +343,19 @@ TODO: also need to solve some **greedy** problems
       - curr_location ('d', 'p', 's')
       - items in hands
       - items at home 
-- [1_C_cybersecurity](https://contest.yandex.ru/contest/80939/problems/C/)
+- [x] [1_C_cybersecurity](https://contest.yandex.ru/contest/80939/problems/C/?lang=en)
   - **O(n)**: 
     - you can't replace "a" with char "a", so **for each "a" (or any other letter) the number of combinations is the same**.
     - number of combinations in "aabc" is (qty of a) * (qty of other letters), so for "a" it would be 2 * 2 (**b**a**a**c, a**ba**c, **c**ab**a**, a***c***b**a**). then do the same with "bc", then with "c"
     - and don't forget to add 1 to res, because we also should include original password
-- [1_D_contest](https://contest.yandex.ru/contest/80939/problems/D/)
+- [x] [1_D_contest](https://contest.yandex.ru/contest/80939/problems/D/?lang=en)
   - take at least one problem from each theme
   - take any problems until the len(res) == k 
-- [1_E_increment](https://contest.yandex.ru/contest/80939/problems/E/)
+- [x] [1_E_increment](https://contest.yandex.ru/contest/80939/problems/E/?lang=en)
   - for some `z`: if `n mod 10` = `z`, then after `I` iterations `n mod 10` = `z` again. You need to find frequency of such repeations and interval between first and second occurances to calculate the rest.
-- [1_F_plus_minus_question](https://contest.yandex.ru/contest/80939/problems/F/)
+- [x] [1_F_plus_minus_question](https://contest.yandex.ru/contest/80939/problems/F/?lang=en)
   - Calculate biggest row sum and smallest col sum assuming that `?` is `+` for rows and `?` is `-` for cols. However, **NOTICE** that if `grid[i][j]` = `?`, then 2 should be extracted from `diff`.
-- [1_G_5_sequence](https://contest.yandex.ru/contes t/80939/problems/G/)
+- [x] [1_G_5_sequence](https://contest.yandex.ru/contes t/80939/problems/G/)
   - **O(i*j)**:
     - for each `(i,j)` save:
       - vertical length `(curRow[j].vert = prevRow[j].vert + 1)`,
@@ -363,11 +363,11 @@ TODO: also need to solve some **greedy** problems
       - right to left diagonal length,
       - horizontal length (using `curRow[i-1]`).
       - If some `length == 5`, then print Yes and stop program. If `length == 5` never happened -> print No
-- [2_A_ball](https://contest.yandex.ru/contest/80940/problems/H/)
+- [x] [2_A_ball](https://contest.yandex.ru/contest/80940/problems/H/?lang=en)
   - **O(i)**:
     - `steps[0] = 0, steps[1] = 1, steps[2] = 2, steps[3] = 4, steps[i] = steps[i-3] + steps[i-2] + steps[i-1]`
     - `return steps[N]`
-- [2_B_river](https://contest.yandex.ru/contest/80940/problems/B/)
+- [x] [2_B_river](https://contest.yandex.ru/contest/80940/problems/B/?lang=en)
   - ![explanation](README_images/2_B_yandex.png)
   - **O(n)**:
     - on each input[i] calc the best way to get to left side and to get to right side
@@ -375,9 +375,9 @@ TODO: also need to solve some **greedy** problems
         - best_l = min(prev_l + 1, prev_r+1)
         - best_r = min(prev_l+1, prev_r)
         - prev_l, prev_r = best_l, best_r
-- [2_C_intervals](https://contest.yandex.ru/contest/80940/problems/C/)
+- [x] [2_C_intervals](https://contest.yandex.ru/contest/80940/problems/C/?lang=en)
   - **O(N * log(n))**
-- [2_D_dictionary](https://contest.yandex.ru/contest/80940/problems/D/)
+- [x] [2_D_dictionary](https://contest.yandex.ru/contest/80940/problems/D/?lang=en)
   - **O(len(word) * len(word_dict))**:
     - every time when `word[i:].startswith(word_dict[j])`, we do this `dp[i + len(word_dict[j])].append(copy(dp[i][0]) + [j])`.
     - e.g. we have input string "joja" and word_dict: "joj", "jo", "ja":
@@ -399,7 +399,7 @@ TODO: also need to solve some **greedy** problems
             - dp = [[], [], [1], [0], [1,2]]
             - **STOP HERE**, because we already found solution: [1,2] ("jo ja")
   - *Note: this can be solved O(len(word) * log(word_dict)) if we use binary search to find matching words from word_dict* 
-- [2_E_tower](https://contest.yandex.ru/contest/80940/problems/E/)
+- [x] [2_E_tower](https://contest.yandex.ru/contest/80940/problems/E/?lang=en)
   - **O(N):**
     - Solution can be divided in 2 steps:
       1. make array `towers` where `tower[i]` is safety of tower which last column is `i`
@@ -407,7 +407,7 @@ TODO: also need to solve some **greedy** problems
          - `include = include = towers[i] + dp[i-K][0]`
          - `exclude = sorted((val, prev_vals) for val, prev_vals in dp[i-K+1:i+1])[-1]`
          - then we compare exclude and include and make decision
-- [2_F_game](https://contest.yandex.ru/contest/80940/problems/F/)
+- [x] [2_F_game](https://contest.yandex.ru/contest/80940/problems/F/?lang=en)
   - **O(N):**
     - if cur_line[i] is reachable:
       - cur_line[i] = best_reachable_val_of_previous_raw + (1 if line[i] == 'C' else 0)
@@ -418,13 +418,13 @@ TODO: also need to solve some **greedy** problems
       WW.
       .WW  # this one is unreachable
       ```
-- [2_G_stairs](https://contest.yandex.ru/contest/80940/problems/G/)
+- [x] [2_G_stairs](https://contest.yandex.ru/contest/80940/problems/G/?lang=en)
   - **O(N^3):**
     - `dp[0][0] = 1`
     - `dp[total][first_row]` = number of possible stairs, which consist of `total` cubes and which first row consists of `first_row` cubes  
     - `dp[total][first_row] = dp[total-first_row][first_row-1] + dp[total-first_row][first_row-2] + ... + dp[total-first_row][1]`. In this way we calculate all possible ways to place cubes when total sum is `total` and there are `first_row` cubes in first row
     - But remember that `first_row <= total`
-- [2_H_matchsticks](https://contest.yandex.ru/contest/80940/problems/H/)
+- [x] [2_H_matchsticks](https://contest.yandex.ru/contest/80940/problems/H/?lang=en)
   - **O(1)**:
     - if **1** matchstick is left, then person wins:
       - he wins (can remove 1 last stick)
@@ -439,8 +439,8 @@ TODO: also need to solve some **greedy** problems
     - if **8**:
       - loss (because can't remove enough sticks to get to number where opponent will lose)
     - as we can see the if `N % 4 == 0`, then person loses
-- [2_I_chain](https://contest.yandex.ru/contest/80940/problems/I/)
-- [2_J_masquerade](https://contest.yandex.ru/contest/80940/problems/J/)
+- [x] [2_I_chain](https://contest.yandex.ru/contest/80940/problems/I/?lang=en)
+- [x] [2_J_masquerade](https://contest.yandex.ru/contest/80940/problems/J/?lang=en)
   - **O(L * N * Fmax):**
     - `dp[s][k] = best(Cost(k ,t) + dp[s-t][k-1] for t in 0..F[k])`
       - so we calculate best cost for `s` meters and `k`th house using previous results
@@ -448,8 +448,8 @@ TODO: also need to solve some **greedy** problems
       - so if the best variant is to just buy more or equal to `s` meters in shop `k`, then buy it in shop `k`
     <!-- - `for s in range(L+1)` -->
     <!-- - `dp[s][k] = best price for s meters and 0..k shops` -->
-- [3_A_shelf](https://contest.yandex.ru/contest/80941/problems/A/)
-- [3_B_from_dead_end_to_dead_end](https://contest.yandex.ru/contest/80941/problems/B/)
+- [x] [3_A_shelf](https://contest.yandex.ru/contest/80941/problems/A/?lang=en)
+- [x] [3_B_from_dead_end_to_dead_end](https://contest.yandex.ru/contest/80941/problems/B/?lang=en)
   - **i don't know complexity, but it's pretty fast:**
     - gradually simultaniously explore all nodes starting from leaf nodes. Example:
       - Tree:
@@ -460,19 +460,19 @@ TODO: also need to solve some **greedy** problems
       ![alt text](README_images/3_B_3_yandex.png)
       - When exploring next neighbor of `2` we find that it is already explored. So, we found the result: 1-2 path + 2-3 path + best path to 3 = 1 + 1 + 1 = 3
       ![alt text](README_images/3_B_4_yandex.png)
-- [3_C_advertisement](https://contest.yandex.ru/contest/80941/problems/C/)
+- [x] [3_C_advertisement](https://contest.yandex.ru/contest/80941/problems/C/?lang=en)
   - **O(log(n) * n):**
     - By binary search find matching k
     - I used brute force algorithm to check if k matches. Since I used C++, I didn't really care about optimization of this thing 🙂
-- [3_D_currency_exchange](https://contest.yandex.ru/contest/80941/problems/D/)
+- [x] [3_D_currency_exchange](https://contest.yandex.ru/contest/80941/problems/D/?lang=en)
   - sort `tables` and save values like this `[ [val1, orig_idx1],  [val2, orig_idx2] ]`. in this way it would be easier to determine original indexes for answer.
   - iterate with `i` through sorted tables
     - `target = P / val_i`
     - with binary search find best `j` for this `target` **WHICH IS NOT EQUAL TO i**
     - if `val_i / val_j` is smaller than `best_ratio`, then save original indexes of those values as **best indexes**
   - print **best indexes**
-- [3_E_feudalism](https://contest.yandex.ru/contest/80941/problems/E/)
-- [3_F_ancestor](https://contest.yandex.ru/contest/80941/problems/F/)
+- [x] [3_E_feudalism](https://contest.yandex.ru/contest/80941/problems/E/?lang=en)
+- [x] [3_F_ancestor](https://contest.yandex.ru/contest/80941/problems/F/?lang=en)
   - Iterate through nodes. Before entering node, save current time, after exploring node, also save time. Like this:
     - The tree:
     ![alt text](README_images/3_F_1.png)
@@ -488,10 +488,11 @@ TODO: also need to solve some **greedy** problems
     - Do the same with the rest
     ![alt text](README_images/3_F_5.png)
   - After we explored all nodes we can easily determine if the node is parent or not. `2nd` node is child of `1st`, because 1-10 interval includes 2-3. However `3rd` node is not parent of `2nd`, because 2-3 interval is **not** inside 4-9 interval.
-- [3_G_gravity](https://contest.yandex.ru/contest/80941/problems/G/)
-- [3_H_pickup](https://contest.yandex.ru/contest/80941/problems/H/)
-- [3_I_expression_tree](https://contest.yandex.ru/contest/80941/problems/I/)
-- [3_J_interviews](https://contest.yandex.ru/contest/80941/problems/J/)
+- [x] [3_G_gravity](https://contest.yandex.ru/contest/80941/problems/G/?lang=en)
+- [x] [3_H_pickup](https://contest.yandex.ru/contest/80941/problems/H/?lang=en)
+- [x] [3_I_expression_tree](https://contest.yandex.ru/contest/80941/problems/I/?lang=en)
+- [x] [3_J_interviews](https://contest.yandex.ru/contest/80941/problems/J/?lang=en)
+- [ ] [4_A_]
 
 ## Notes
 - [ ] 2_C intervals was hard, it would be good practice to solve it again
