@@ -492,7 +492,13 @@ TODO: also need to solve some **greedy** problems
 - [x] [3_H_pickup](https://contest.yandex.ru/contest/80941/problems/H/?lang=en)
 - [x] [3_I_expression_tree](https://contest.yandex.ru/contest/80941/problems/I/?lang=en)
 - [x] [3_J_interviews](https://contest.yandex.ru/contest/80941/problems/J/?lang=en)
-- [ ] [4_A_]
+- [x] [4_A_office_trips](https://contest.yandex.ru/contest/80942/problems/A/)
+  - Iterate through all seconds since 00:00 till 23:59
+    - Process 2 stations:
+      - If trip starts at current second:
+        - If any bus on current station, then use it AND don't forget to save that at arrival time on opposite station there should be +1 bus
+        - If no available bus on station, then total_buses += 1
+      - If there are buses left at current second, then in next second at current station they should be available
 
 ## Notes
 - [ ] 2_C intervals was hard, it would be good practice to solve it again
