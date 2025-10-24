@@ -499,6 +499,8 @@ TODO: also need to solve some **greedy** problems
         - If any bus on current station, then use it AND don't forget to save that at arrival time on opposite station there should be +1 bus
         - If no available bus on station, then total_buses += 1
       - If there are buses left at current second, then in next second at current station they should be available
+- [x] [4_C_candidates_queue](https://contest.yandex.ru/contest/80942/problems/C/)
+  - Use Fenwick tree
 
 ## Notes
 - [ ] 2_C intervals was hard, it would be good practice to solve it again
