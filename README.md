@@ -499,6 +499,12 @@ TODO: also need to solve some **greedy** problems
         - If any bus on current station, then use it AND don't forget to save that at arrival time on opposite station there should be +1 bus
         - If no available bus on station, then total_buses += 1
       - If there are buses left at current second, then in next second at current station they should be available
+- [x] [4_B_car_tax](https://contest.yandex.ru/contest/80942/problems/B/)
+  - **O(m * log(n))**:
+    - Iterate through cars (`q` vals):
+      - with binary search find **index** of greatest `b` (power) that is less than `q` (car's power)
+      - take t (`tax`) for this index and multiply it by `q`
+      - print result of multiplication
 - [x] [4_C_candidates_queue](https://contest.yandex.ru/contest/80942/problems/C/)
   - Use Fenwick tree
 
