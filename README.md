@@ -328,7 +328,10 @@ TODO: also need to solve some **divide and conquer** problems
 ## Greedy
 TODO: also need to solve some **greedy** problems
 
-# Yandex Trainings
+# Yandex
+Solutions can be found in [yandex_trainings](https://github.com/Marat22/algosi/tree/master/yandex_trainings) directory
+
+Explanations
 - [x] [A_mushrooms](https://contest.yandex.ru/contest/80939/problems/A/?lang=en)
   - **O(n)**:
     1. find vasya's and masha's sum
