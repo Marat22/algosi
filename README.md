@@ -509,7 +509,7 @@ TODO: also need to solve some **greedy** problems
   - Use Fenwick tree
 - [x] [4_D_friendship_won](https://contest.yandex.ru/contest/80942/problems/D/)
 - [x] [4_E_repair_patholes](https://contest.yandex.ru/contest/80942/problems/E/)
-- [x] []
+- [x] [4_F_train](https://contest.yandex.ru/contest/80942/problems/F/)
 
 ## Notes
 - [ ] 2_C intervals was hard, it would be good practice to solve it again
