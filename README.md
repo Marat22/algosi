@@ -237,6 +237,15 @@
         - add `[Start, End] to res`
         - return `res`
     - [ ] [Non-overlapping Intervals](https://leetcode.com/problems/non-overlapping-intervals/)
+      - **time - O(N log N), space - O(1)**
+        - Sort input `intervals`
+        - Save `prev_end = intervals[0][1]`
+        - Iterate through sorted `intervals[1:]`:
+          - if intervals[i][0] >= prev_end (*if doesn't overlap with prev interval*):
+            - `prev_end = intervals[i][1]`
+          - else (*interval overlaps with prev interval*):
+            - `res += 1` (*need to remove some interval in any case*)
+            - `prev_end = min(prev_end, intervals[i][1])` (*save interval with smallest `prev_end`, because it will overlap with smaller number of intervals*)
     - [ ] [Meeting Rooms (Premium)](https://leetcode.com/problems/meeting-rooms/)
     - [ ] [Meeting Rooms II (Premium)](https://leetcode.com/problems/meeting-rooms-ii/)
 
@@ -307,6 +316,8 @@ I think I should go back and solve this questions again:
     - [ ] [Longest Consecutive Sequence](https://leetcode.com/problems/longest-consecutive-sequence/)
     - [ ] [Alien Dictionary (Premium)](https://leetcode.com/problems/alien-dictionary/)
     - [ ] [Graph Valid Tree (Premium)](https://leetcode.com/problems/graph-valid-tree/)
+- [ ] Interval
+    - [ ] [Non-overlapping Intervals](https://leetcode.com/problems/non-overlapping-intervals/description/)
 
 Also, I think I can find better approach for this problems:
 - [ ] [Missing Number](https://leetcode.com/problems/missing-number/)
