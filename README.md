@@ -512,6 +512,7 @@ TODO: also need to solve some **greedy** problems
 - [x] [4_F_train](https://contest.yandex.ru/contest/80942/problems/F/)
 - [x] [4_G_series_planning](https://contest.yandex.ru/contest/80942/problems/G/)
 - [x] [4_I_banner](https://contest.yandex.ru/contest/80942/problems/I/)
+- [x] [4_J_autosport](https://contest.yandex.ru/contest/80942/problems/J/)
 
 ## Notes
 - [ ] 2_C intervals was hard, it would be good practice to solve it again
