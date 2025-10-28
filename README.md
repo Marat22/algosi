@@ -508,6 +508,8 @@ TODO: also need to solve some **greedy** problems
 - [x] [4_C_candidates_queue](https://contest.yandex.ru/contest/80942/problems/C/)
   - Use Fenwick tree
 - [x] [4_D_friendship_won](https://contest.yandex.ru/contest/80942/problems/D/)
+- [x] [4_E_repair_patholes](https://contest.yandex.ru/contest/80942/problems/E/)
+- [x] []
 
 ## Notes
 - [ ] 2_C intervals was hard, it would be good practice to solve it again
