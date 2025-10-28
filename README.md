@@ -355,7 +355,7 @@ TODO: also need to solve some **greedy** problems
   - for some `z`: if `n mod 10` = `z`, then after `I` iterations `n mod 10` = `z` again. You need to find frequency of such repeations and interval between first and second occurances to calculate the rest.
 - [x] [1_F_plus_minus_question](https://contest.yandex.ru/contest/80939/problems/F/?lang=en)
   - Calculate biggest row sum and smallest col sum assuming that `?` is `+` for rows and `?` is `-` for cols. However, **NOTICE** that if `grid[i][j]` = `?`, then 2 should be extracted from `diff`.
-- [x] [1_G_5_sequence](https://contest.yandex.ru/contes t/80939/problems/G/)
+- [x] [1_G_5_sequence](https://contest.yandex.ru/contest/80939/problems/G/)
   - **O(i*j)**:
     - for each `(i,j)` save:
       - vertical length `(curRow[j].vert = prevRow[j].vert + 1)`,
@@ -511,6 +511,7 @@ TODO: also need to solve some **greedy** problems
 - [x] [4_E_repair_patholes](https://contest.yandex.ru/contest/80942/problems/E/)
 - [x] [4_F_train](https://contest.yandex.ru/contest/80942/problems/F/)
 - [x] [4_G_series_planning](https://contest.yandex.ru/contest/80942/problems/G/)
+- [x] [4_H_boss_bonus](https://contest.yandex.ru/contest/80942/problems/H/)
 - [x] [4_I_banner](https://contest.yandex.ru/contest/80942/problems/I/)
 - [x] [4_J_autosport](https://contest.yandex.ru/contest/80942/problems/J/)
 
