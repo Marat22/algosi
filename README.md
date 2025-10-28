@@ -507,6 +507,7 @@ TODO: also need to solve some **greedy** problems
       - print result of multiplication
 - [x] [4_C_candidates_queue](https://contest.yandex.ru/contest/80942/problems/C/)
   - Use Fenwick tree
+- [x] [4_D_friendship_won](https://contest.yandex.ru/contest/80942/problems/D/)
 
 ## Notes
 - [ ] 2_C intervals was hard, it would be good practice to solve it again
