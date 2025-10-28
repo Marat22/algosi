@@ -511,6 +511,7 @@ TODO: also need to solve some **greedy** problems
 - [x] [4_E_repair_patholes](https://contest.yandex.ru/contest/80942/problems/E/)
 - [x] [4_F_train](https://contest.yandex.ru/contest/80942/problems/F/)
 - [x] [4_G_series_planning](https://contest.yandex.ru/contest/80942/problems/G/)
+- [x] [4_I_banner](https://contest.yandex.ru/contest/80942/problems/I/)
 
 ## Notes
 - [ ] 2_C intervals was hard, it would be good practice to solve it again
