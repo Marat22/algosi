@@ -236,7 +236,7 @@
           - else -> add `[Start, End] to res`, set `Start, End = intervals[i][0], intervals[i][1]`
         - add `[Start, End] to res`
         - return `res`
-    - [ ] [Non-overlapping Intervals](https://leetcode.com/problems/non-overlapping-intervals/)
+    - [x] [Non-overlapping Intervals](https://leetcode.com/problems/non-overlapping-intervals/)
       - **time - O(N log N), space - O(1)**
         - Sort input `intervals`
         - Save `prev_end = intervals[0][1]`
@@ -246,7 +246,12 @@
           - else (*interval overlaps with prev interval*):
             - `res += 1` (*need to remove some interval in any case*)
             - `prev_end = min(prev_end, intervals[i][1])` (*save interval with smallest `prev_end`, because it will overlap with smaller number of intervals*)
-    - [ ] [Meeting Rooms (Premium)](https://leetcode.com/problems/meeting-rooms/)
+    - [x] [Meeting Rooms (Premium)](https://leetcode.com/problems/meeting-rooms/)
+      - **time - O(N log N), space - O(1):**
+        - Sort `intervals` by `start`
+        - Iterate through `intervals`
+          - If `prev interval end` is bigger than `current interval start` -> `return false`
+        - `return true` 
     - [ ] [Meeting Rooms II (Premium)](https://leetcode.com/problems/meeting-rooms-ii/)
 
 - [ ] Linked List
