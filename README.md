@@ -213,7 +213,7 @@
               - `res+=1`
               - `DFS(i, adj)` (remove all connected nodes)
           - `return res`
-- [ ] Interval
+- [x] Interval
     - [x] [Insert Interval](https://leetcode.com/problems/insert-interval/)
       - **O(n):**
         - [My explanation on leetcode](https://leetcode.com/problems/insert-interval/solutions/7231294/erlangpython-explanation-mem-on-time-on-skvbr/)
@@ -252,7 +252,37 @@
         - Iterate through `intervals`
           - If `prev interval end` is bigger than `current interval start` -> `return false`
         - `return true` 
-    - [ ] [Meeting Rooms II (Premium)](https://leetcode.com/problems/meeting-rooms-ii/)
+    - [x] [Meeting Rooms II (Premium)](https://leetcode.com/problems/meeting-rooms-ii/)
+      - **time - O(N log N), space - O(n):**
+          - Sort `intervals` by `start`
+          - Create empty list `last_elements` to store the end of last meeting for day. Keep `last_elements` sorted
+          - Iterate through `intervals`:
+            - If `intervals[i].start` is smaller than smallest element in `last_elements`:
+              - *We can't put this meeting in existing days. We need one more*
+              - We add `intervals[i].end` to `last_elements`. **Keep `last_elements` sorted**!
+            - Else:
+              - *We can put this meeting in existing day*
+              - We move the end of last meeting for day:
+                - Remove end of last meeting for this day.
+                - We add `intervals[i].end` to `last_elements`. **Keep `last_elements` sorted**!
+      - For example, we have intervals `[(25,579),(218,918),(1281,1307),(623,1320),(685,1353),(1308,1358)]`:
+        ```
+        i = 0, intervals[i].start=25, intervals[i].end=579, last_elements: # we add end of first meeting:
+
+        i = 1, intervals[i].start=218, intervals[i].end=918, last_elements: 579  # because of intervals[i] starts before 579, we need one day more:
+        
+        i = 2, intervals[i].start=623, intervals[i].end=1320, last_elements: 579, 918  # We can schedule meeting for existing day which last meeting ends at 579
+                index to delete = 0
+
+        i = 3, intervals[i].start=685, intervals[i].end=1353, last_elements: 918, 1320
+
+        i = 4, intervals[i].start=1281, intervals[i].end=1307, last_elements: 918, 1320, 1353
+                index to delete = 0
+
+        i = 5, intervals[i].start=1308, intervals[i].end=1358, last_elements: 1307, 1320, 1353
+                index to delete = 0
+
+        ```
 
 - [ ] Linked List
     - [x] [Reverse Linked List](https://leetcode.com/problems/reverse-linked-list/)
