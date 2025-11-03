@@ -301,7 +301,13 @@
           - remove smallest element of `min_heap`
           - add `next` node of removed element if `next` node is not `null`
         - return `res`
-    - [ ] [Remove Nth Node From End of List](https://leetcode.com/problems/remove-nth-node-from-end-of-list/)
+    - [x] [Remove Nth Node From End of List](https://leetcode.com/problems/remove-nth-node-from-end-of-list/)
+      - **time - O(N), space - O(N):**
+        1. save all of nodes in array
+        2. get the **nodeToRemove** (`arr[index_of_last_node - (n - 1)]`)
+        3. get the **nodeToUpdate** (`arr[index_of_last_node - (n - 1) - 1]`)
+        4. set **nodeToUpdate->next = nodeToRemove->next**
+        - but there is also **EDGE CASE:** if **nodeToRemove** is `head`, then we just should return `next` of the `head`
     - [ ] [Reorder List](https://leetcode.com/problems/reorder-list/)
 
 - [ ] Matrix
