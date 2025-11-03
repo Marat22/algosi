@@ -371,6 +371,13 @@ Also, I think I can find better approach for this problems:
 
 
 ## Other algorithms
+- [ ] Yandex
+  - [ ] According to [this article](https://habr.com/ru/articles/902908/), these problems can be asked on interview:
+    - [ ] [Permutation in String](https://leetcode.com/problems/permutation-in-string/description/)
+    - [ ] [Max Consecutive Ones III](https://leetcode.com/problems/max-consecutive-ones-iii/description/)
+    - [ ] [Find Duplicate Subtrees](https://leetcode.com/problems/find-duplicate-subtrees/description/)  
+  - [ ] [Interview on YouTube](https://www.youtube.com/watch?v=tfvm2k5c9JI)
+    - [ ] [Squares of Sorted Array](https://leetcode.com/problems/squares-of-a-sorted-array/description/)
 - [ ] [Designs](https://leetcode.com/problem-list/design/). There are some cool deisgns, explore them, I think it will help on interviews. 
   - [ ] [LRU cache](https://leetcode.com/problems/lru-cache/description/)
   - [ ] [Shuffle an Array](https://leetcode.com/problems/shuffle-an-array/description/)
@@ -385,7 +392,7 @@ TODO: also need to solve some **divide and conquer** problems
 ## Greedy
 TODO: also need to solve some **greedy** problems
 
-# Yandex
+# Yandex Contest
 Solutions can be found in [yandex_trainings](https://github.com/Marat22/algosi/tree/master/yandex_trainings) directory
 
 Explanations
