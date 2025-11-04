@@ -308,7 +308,11 @@
         3. get the **nodeToUpdate** (`arr[index_of_last_node - (n - 1) - 1]`)
         4. set **nodeToUpdate->next = nodeToRemove->next**
         - but there is also **EDGE CASE:** if **nodeToRemove** is `head`, then we just should return `next` of the `head`
-    - [ ] [Reorder List](https://leetcode.com/problems/reorder-list/)
+    - [x] [Reorder List](https://leetcode.com/problems/reorder-list/)
+      - **time - O(N), space - O(1):**
+        - Get the first node of second half
+        - Reverse second half
+        - Iterate through first and second half to update nexts  
 
 - [ ] Matrix
     - [ ] [Set Matrix Zeroes](https://leetcode.com/problems/set-matrix-zeroes/)
@@ -370,6 +374,7 @@ I think I should go back and solve this questions again:
     - [ ] [Graph Valid Tree (Premium)](https://leetcode.com/problems/graph-valid-tree/)
 - [ ] Interval
     - [ ] [Non-overlapping Intervals](https://leetcode.com/problems/non-overlapping-intervals/description/)
+    - [ ] [Reorder List](https://leetcode.com/problems/reorder-list/)
 
 Also, I think I can find better approach for this problems:
 - [ ] [Missing Number](https://leetcode.com/problems/missing-number/)
