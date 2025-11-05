@@ -284,7 +284,7 @@
 
         ```
 
-- [ ] Linked List
+- [x] Linked List
     - [x] [Reverse Linked List](https://leetcode.com/problems/reverse-linked-list/)
       - Each `value` of reversed list node is `value` of head, each `next` - previously accumulated reversed list
     - [x] [Detect Cycle in a Linked List](https://leetcode.com/problems/linked-list-cycle/)
@@ -315,7 +315,9 @@
         - Iterate through first and second half to update nexts  
 
 - [ ] Matrix
-    - [ ] [Set Matrix Zeroes](https://leetcode.com/problems/set-matrix-zeroes/)
+    - [x] [Set Matrix Zeroes](https://leetcode.com/problems/set-matrix-zeroes/)
+      - **time - O(n*m), space - O(1)**
+        - use first row and first col to save if the row or the col should be set to 0
     - [ ] [Spiral Matrix](https://leetcode.com/problems/spiral-matrix/)
     - [ ] [Rotate Image](https://leetcode.com/problems/rotate-image/)
     - [ ] [Word Search](https://leetcode.com/problems/word-search/)
@@ -375,6 +377,8 @@ I think I should go back and solve this questions again:
 - [ ] Interval
     - [ ] [Non-overlapping Intervals](https://leetcode.com/problems/non-overlapping-intervals/description/)
     - [ ] [Reorder List](https://leetcode.com/problems/reorder-list/)
+- [ ] Matrix
+  - [ ] [Set Matrix Zeroes](https://leetcode.com/problems/set-matrix-zeroes/)
 
 Also, I think I can find better approach for this problems:
 - [ ] [Missing Number](https://leetcode.com/problems/missing-number/)
