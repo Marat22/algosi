@@ -318,7 +318,12 @@
     - [x] [Set Matrix Zeroes](https://leetcode.com/problems/set-matrix-zeroes/)
       - **time - O(n*m), space - O(1)**
         - use first row and first col to save if the row or the col should be set to 0
-    - [ ] [Spiral Matrix](https://leetcode.com/problems/spiral-matrix/)
+    - [x] [Spiral Matrix](https://leetcode.com/problems/spiral-matrix/)
+      - **time - O(n\*m), space - O(n\*m)**
+        - add first row of matrix to `spiral` and delete first row
+        - add right col of matrix to `spiral` and delete right col
+        - add last row of matrix to `spiral` and delete last row
+        - add left col of matrix to `spiral` and delete left col
     - [ ] [Rotate Image](https://leetcode.com/problems/rotate-image/)
     - [ ] [Word Search](https://leetcode.com/problems/word-search/)
 
