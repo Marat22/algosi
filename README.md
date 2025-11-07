@@ -324,7 +324,16 @@
         - add right col of matrix to `spiral` and delete right col
         - add last row of matrix to `spiral` and delete last row
         - add left col of matrix to `spiral` and delete left col
-    - [ ] [Rotate Image](https://leetcode.com/problems/rotate-image/)
+    - [x] [Rotate Image](https://leetcode.com/problems/rotate-image/)
+      - **time - O(N^2), space - O(1)**
+        - Process each layer one by one
+          - Process each val in layer:
+            - save top val
+            - top <- left
+            - left <- bottom
+            - bottom <- right
+            - right <- top
+
     - [ ] [Word Search](https://leetcode.com/problems/word-search/)
 
 - [ ] String
