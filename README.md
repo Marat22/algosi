@@ -314,7 +314,7 @@
         - Reverse second half
         - Iterate through first and second half to update nexts  
 
-- [ ] Matrix
+- [x] Matrix
     - [x] [Set Matrix Zeroes](https://leetcode.com/problems/set-matrix-zeroes/)
       - **time - O(n*m), space - O(1)**
         - use first row and first col to save if the row or the col should be set to 0
@@ -329,12 +329,23 @@
         - Process each layer one by one
           - Process each val in layer:
             - save top val
-            - top <- left
+            - top <- leftc
             - left <- bottom
             - bottom <- right
             - right <- top
 
-    - [ ] [Word Search](https://leetcode.com/problems/word-search/)
+    - [x] [Word Search](https://leetcode.com/problems/word-search/)
+      - **time - (r * c * l^4) , space - (r * c)**
+        - Use `dfs`
+          - if `r` or `c` is out of boundaries -> return false
+          - if `r;c` inside current `path` -> return false
+          - if `board[r][c] != word[word_ind]` -> return false
+          - if `word_ind == word.len() - 1` -> return true
+          - add `r;c` coordinate to `path`
+          - explore neighbors using `dfs`. if one of calls returns true -> return true
+          - remove `r;c` from `path`
+        - iterate through whole board using dfs, until `true`
+        - if none returned `true` -> return `false`
 
 - [ ] String
     - [ ] [Longest Substring Without Repeating Characters](https://leetcode.com/problems/longest-substring-without-repeating-characters/)
