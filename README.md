@@ -348,7 +348,21 @@
         - if none returned `true` -> return `false`
 
 - [ ] String
-    - [ ] [Longest Substring Without Repeating Characters](https://leetcode.com/problems/longest-substring-without-repeating-characters/)
+    - [x] [Longest Substring Without Repeating Characters](https://leetcode.com/problems/longest-substring-without-repeating-characters/)
+      - *note: i solved the problem using `C++` and `C`. My `C` solution has more efficient algorithm. Here I describe algorithm I applied for `C` solution.*
+      - **BE CAUTIOUS:** in my first implementation i made mistake - i did not consider case when one substring can be part of two different substrings. For example in word "mewmkz" the substring "ewm" can be part of "mewm" and part of "ewmkz", however, "ewmkz" is bigger. 
+      - **time - O(N), space - O(1):**
+        - create array `chars = [-1] * 128` to store indexes of last occurances of chars
+        - `left = 0`
+        - `maxLen = 0`
+        - `for right in range(len(s)):`
+          - `cur_char = s[right]`
+          - `if chars[cur_char] >= left` *(if `cur_char` is between `left` and `right` -> it is inside current word)*
+            - *since we don't need char duplicates, we need to find biggest substring of current substring which DOES NOT include cur_char*
+            - `left = chars[cur_char] + 1` *(move `left` to first char after last occurance of `cur_char`)*
+          - `maxLen = max(maxLen, right - left + 1)`
+          - `char[cur_char] = right` *(save last occurance of char)*
+        - `return maxLen`
     - [ ] [Longest Repeating Character Replacement](https://leetcode.com/problems/longest-repeating-character-replacement/)
     - [ ] [Minimum Window Substring](https://leetcode.com/problems/minimum-window-substring/)
     - [x] [Valid Anagram](https://leetcode.com/problems/valid-anagram/)
