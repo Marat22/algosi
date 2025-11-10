@@ -405,7 +405,7 @@ I think I should go back and solve this questions again:
     - [ ] [Coin Change](https://leetcode.com/problems/coin-change/)
     - [ ] [Longest Increasing Subsequence](https://leetcode.com/problems/longest-increasing-subsequence/)
     - [ ] [Longest Common Subsequence](https://leetcode.com/problems/longest-common-subsequence/). Cheated.
-    - [ ] [Word Break](https://leetcode.com/problems/word-break/). Cheaaated. However, i watched Bottom-Up solution, but implemented Top-down, so it's just half cheating
+    - [x] [Word Break](https://leetcode.com/problems/word-break/). Cheaaated. However, i watched Bottom-Up solution, but implemented Top-down, so it's just half cheating
     - [ ] [Combination Sum IV](https://leetcode.com/problems/combination-sum-iv/). I cheated.
 - [ ] Graph
     - [ ] [Course Schedule](https://leetcode.com/problems/course-schedule/). Cheated, didn't even rewrite in C or Erlang.
