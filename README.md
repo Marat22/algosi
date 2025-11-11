@@ -363,7 +363,12 @@
           - `maxLen = max(maxLen, right - left + 1)`
           - `char[cur_char] = right` *(save last occurance of char)*
         - `return maxLen`
-    - [ ] [Longest Repeating Character Replacement](https://leetcode.com/problems/longest-repeating-character-replacement/)
+    - [x] [Longest Repeating Character Replacement](https://leetcode.com/problems/longest-repeating-character-replacement/)
+      - **time - O(len(s)*26), space - O(26)**
+        - create set `all_chars` with all unique chars of `s`
+        - iterate through each `char` in `all_chars`:
+          - using slow and fast pointer find best solution for `char`
+        - return biggest solution
     - [ ] [Minimum Window Substring](https://leetcode.com/problems/minimum-window-substring/)
     - [x] [Valid Anagram](https://leetcode.com/problems/valid-anagram/)
     - [ ] [Group Anagrams](https://leetcode.com/problems/group-anagrams/)
@@ -418,6 +423,9 @@ I think I should go back and solve this questions again:
     - [ ] [Reorder List](https://leetcode.com/problems/reorder-list/)
 - [ ] Matrix
   - [ ] [Set Matrix Zeroes](https://leetcode.com/problems/set-matrix-zeroes/)
+- [ ] String
+  - [x] [Longest Repeating Character Replacement](https://leetcode.com/problems/longest-repeating-character-replacement/)
+
 
 Also, I think I can find better approach for this problems:
 - [ ] [Missing Number](https://leetcode.com/problems/missing-number/)
