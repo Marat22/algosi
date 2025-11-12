@@ -369,7 +369,13 @@
         - iterate through each `char` in `all_chars`:
           - using slow and fast pointer find best solution for `char`
         - return biggest solution
-    - [ ] [Minimum Window Substring](https://leetcode.com/problems/minimum-window-substring/)
+    - [x] [Minimum Window Substring](https://leetcode.com/problems/minimum-window-substring/)
+      - Save number of each letter in `t`
+      - Iterate through `s`:
+        - save last usage of char `s[i]`
+        - if enough chars for `t`:
+          - according to last usages of chars calculate len of current window
+          - if needed -> update best len of window
     - [x] [Valid Anagram](https://leetcode.com/problems/valid-anagram/)
     - [ ] [Group Anagrams](https://leetcode.com/problems/group-anagrams/)
     - [x] [Valid Parentheses](https://leetcode.com/problems/valid-parentheses/)
@@ -429,6 +435,9 @@ I think I should go back and solve this questions again:
 
 Also, I think I can find better approach for this problems:
 - [ ] [Missing Number](https://leetcode.com/problems/missing-number/)
+- [ ] String
+  - [ ] [Longest Repeating Character Replacement](https://leetcode.com/problems/longest-repeating-character-replacement/)
+  - [ ] [Minimum Window Substring](https://leetcode.com/problems/minimum-window-substring/)
 
 
 
