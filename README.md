@@ -377,7 +377,11 @@
           - according to last usages of chars calculate len of current window
           - if needed -> update best len of window
     - [x] [Valid Anagram](https://leetcode.com/problems/valid-anagram/)
-    - [ ] [Group Anagrams](https://leetcode.com/problems/group-anagrams/)
+    - [x] [Group Anagrams](https://leetcode.com/problems/group-anagrams/)
+      - **time - O(N log(N) + N * M log(M)), space - O(N * M)** *(N - len of strs, M - len of strs\[i\])*
+        - Sort every string in `strs`
+        - Sort `strs`
+        - If strs[i] == strs[i-1], then they are in same group
     - [x] [Valid Parentheses](https://leetcode.com/problems/valid-parentheses/)
     - [x] [Valid Palindrome](https://leetcode.com/problems/valid-palindrome/)
       - **time - O(N), space - O(1)**
