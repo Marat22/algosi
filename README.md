@@ -388,7 +388,11 @@
         - create `left` and `right` pointers
         - move pointers to center, but don't forget to **ignore non-alphanumeric chars** and **convert into lowercase** before comparing
     - [ ] [Longest Palindromic Substring](https://leetcode.com/problems/longest-palindromic-substring/)
-    - [ ] [Palindromic Substrings](https://leetcode.com/problems/palindromic-substrings/)
+    - [x] [Palindromic Substrings](https://leetcode.com/problems/palindromic-substrings/)
+      - **time - O(N^2), space - O(1)**
+        - There are 2 types of palindromes: odd ("zaz") or even ("issi) length
+        - For every point in `s` try to create odd and even palindrome. 
+          - If s[l] == s[r] -> res++, and then expand palindrome (`l--`, `r++`) and repeat 
     - [ ] [Encode and Decode Strings (Premium)](https://leetcode.com/problems/encode-and-decode-strings/)
 
 - [ ] Tree
