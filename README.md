@@ -404,7 +404,11 @@
 
 - [ ] Tree
     - [x] [Maximum Depth of Binary Tree](https://leetcode.com/problems/maximum-depth-of-binary-tree/)
-    - [ ] [Same Tree](https://leetcode.com/problems/same-tree/)
+    - [x] [Same Tree](https://leetcode.com/problems/same-tree/)
+      - **time - O(N), space - O(N)**
+        - use dfs:
+          - if `p` or `q` is null && `p` != `q`, then return false
+          - else return `p->val == q->val` && `dfs(q->left, p->left)` && `dfs(q->right, p->right)`
     - [x] [Invert Binary Tree](https://leetcode.com/problems/invert-binary-tree/)
     - [ ] [Binary Tree Maximum Path Sum](https://leetcode.com/problems/binary-tree-maximum-path-sum/)
     - [ ] [Binary Tree Level Order Traversal](https://leetcode.com/problems/binary-tree-level-order-traversal/)
