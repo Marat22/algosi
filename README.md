@@ -410,7 +410,17 @@
           - if `p` or `q` is null && `p` != `q`, then return false
           - else return `p->val == q->val` && `dfs(q->left, p->left)` && `dfs(q->right, p->right)`
     - [x] [Invert Binary Tree](https://leetcode.com/problems/invert-binary-tree/)
-    - [ ] [Binary Tree Maximum Path Sum](https://leetcode.com/problems/binary-tree-maximum-path-sum/)
+    - [x] [Binary Tree Maximum Path Sum](https://leetcode.com/problems/binary-tree-maximum-path-sum/)
+      - **time - O(N), space - O(N)**
+        - concept:
+          - dfs(node):
+            - update res if one of these vals is bigger than res:
+              - node
+              - left + node + right # NOTE that `dfs` can't return `left + node + right`, because `parent + node + node.left + node.right` is impossible
+              - left + node
+              - node + right
+            - return best(node, left + node, right + node)
+        - DON'T FORGET ABOUT CASE `[-3]`. I recommend to set initial `res` to `root->val`
     - [ ] [Binary Tree Level Order Traversal](https://leetcode.com/problems/binary-tree-level-order-traversal/)
     - [ ] [Serialize and Deserialize Binary Tree](https://leetcode.com/problems/serialize-and-deserialize-binary-tree/)
     - [ ] [Subtree of Another Tree](https://leetcode.com/problems/subtree-of-another-tree/)
@@ -453,7 +463,8 @@ I think I should go back and solve this questions again:
   - [ ] [Set Matrix Zeroes](https://leetcode.com/problems/set-matrix-zeroes/)
 - [ ] String
   - [x] [Longest Repeating Character Replacement](https://leetcode.com/problems/longest-repeating-character-replacement/)
-
+- [ ] Tree
+  - [ ] [Binary Tree Maximum Path Sum](https://leetcode.com/problems/binary-tree-maximum-path-sum/)
 
 Also, I think I can find better approach for this problems:
 - [ ] [Missing Number](https://leetcode.com/problems/missing-number/)
