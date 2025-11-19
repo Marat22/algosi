@@ -13,6 +13,19 @@
     - [x] [Find Minimum in Rotated Sorted Array](https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/)
     - [x] [Search in Rotated Sorted Array](https://leetcode.com/problems/search-in-rotated-sorted-array/)
     - [x] [3Sum](https://leetcode.com/problems/3sum/)
+      - this solution is not efficient at all (beats 12% runtime and 13% memory), i will probably come back to this problem later
+      - **time - O(N^2 Log N), space - O(N)**
+        - sort `nums`
+        - remove duplicates from `nums`:
+          - each value can be repeated not more than 3 times
+          - ex. [0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,-1,-1,-1] -> [0,0,0,1,1,1,-1,-1,-1]
+        - `res_set = set()`
+        - iterate `first_val_inx` (0 ... len(nums))
+          - iterate `second_val_inx` (first_val_inx+1 ... len(nums))
+            - target = -(nums[first_val_inx] + nums[second_val_inx])
+            - find target using binary search
+            - if target is found:
+              - add triplet to `res_set`
     - [x] [Container With Most Water](https://leetcode.com/problems/container-with-most-water/)
 
 - [x] Binary
@@ -440,7 +453,7 @@
 ## Notes
 I think I should go back and solve this questions again:
 - [ ] Array
-  - [ ] [3Sum](https://leetcode.com/problems/3sum/). Cheated for this question.
+  - [x] [3Sum](https://leetcode.com/problems/3sum/). Cheated for this question.
   - [ ] [Maximum Product Subarray](https://leetcode.com/problems/maximum-product-subarray/)
 - [ ] Binary
     - [ ] [Sum of Two Integers](https://leetcode.com/problems/sum-of-two-integers/). Cheated for this question.
