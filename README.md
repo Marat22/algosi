@@ -434,7 +434,12 @@
               - node + right
             - return best(node, left + node, right + node)
         - DON'T FORGET ABOUT CASE `[-3]`. I recommend to set initial `res` to `root->val`
-    - [ ] [Binary Tree Level Order Traversal](https://leetcode.com/problems/binary-tree-level-order-traversal/)
+    - [x] [Binary Tree Level Order Traversal](https://leetcode.com/problems/binary-tree-level-order-traversal/)
+      - **time - O(N), space - O(N)**
+        - def traverse(node, curr_depth):
+          - add node->val to res[curr_depth]
+          - traverse(node->left)
+          - traverse(node->right)
     - [ ] [Serialize and Deserialize Binary Tree](https://leetcode.com/problems/serialize-and-deserialize-binary-tree/)
     - [ ] [Subtree of Another Tree](https://leetcode.com/problems/subtree-of-another-tree/)
     - [ ] [Construct Binary Tree from Preorder and Inorder Traversal](https://leetcode.com/problems/construct-binary-tree-from-preorder-and-inorder-traversal/)
