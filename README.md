@@ -440,7 +440,19 @@
           - add node->val to res[curr_depth]
           - traverse(node->left)
           - traverse(node->right)
-    - [ ] [Serialize and Deserialize Binary Tree](https://leetcode.com/problems/serialize-and-deserialize-binary-tree/)
+    - [x] [Serialize and Deserialize Binary Tree](https://leetcode.com/problems/serialize-and-deserialize-binary-tree/)
+      - **time - O(N), space - O(N)**
+        - serialization:
+          - BFS:
+            - write all vals of last row to res
+            - clear last row of nodes
+            - save all non-null lefts and rights as last row
+        - deserialization:
+          - BFS:
+            - keep last row of nodes
+            - update theirs lefts and rights of last row of nodex
+            - clear last row of nodes
+            - add lefts and rights
     - [ ] [Subtree of Another Tree](https://leetcode.com/problems/subtree-of-another-tree/)
     - [ ] [Construct Binary Tree from Preorder and Inorder Traversal](https://leetcode.com/problems/construct-binary-tree-from-preorder-and-inorder-traversal/)
     - [ ] [Validate Binary Search Tree](https://leetcode.com/problems/validate-binary-search-tree/)
