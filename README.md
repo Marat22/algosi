@@ -40,6 +40,13 @@
 - [x] Dynamic Programming
     - [x] [Climbing Stairs](https://leetcode.com/problems/climbing-stairs/)
     - [x] [Coin Change](https://leetcode.com/problems/coin-change/)
+      - **time - O(amount * coins.length), space - O(amount)**
+        - create `best_qty = [amount+1] * (amount+1)`
+        - `best_qty[0] = 0`
+        - `iterate cur_amount in range 0..amount`
+          - `iterate through coins`
+            - `best_qty[cur_amount] = min(best_qty[cur_amount], best_qty[cur_amount-coin] + 1)`
+        - `return best_qty[amount] > amount ? -1 : best_qty[amount];`
     - [x] [Longest Increasing Subsequence](https://leetcode.com/problems/longest-increasing-subsequence/)
         - **O(n^2) Bottom Up**: 
           - dp[i] = longest combination for nums[i:]
@@ -462,7 +469,7 @@
             - if root or subRoot is Null -> stop and don't call next compare
           - `explore`
             - `if root == subRoot -> compare`
-            - `if explore(root->left, subRoot) || explore(root->right, subRoot) -> return true`  
+            - `if explore(root->left, subRoot) || explore(root->right, subRoot) -> return true`   
     - [ ] [Construct Binary Tree from Preorder and Inorder Traversal](https://leetcode.com/problems/construct-binary-tree-from-preorder-and-inorder-traversal/)
     - [ ] [Validate Binary Search Tree](https://leetcode.com/problems/validate-binary-search-tree/)
     - [ ] [Kth Smallest Element in a BST](https://leetcode.com/problems/kth-smallest-element-in-a-bst/)
