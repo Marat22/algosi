@@ -453,7 +453,16 @@
             - update theirs lefts and rights of last row of nodex
             - clear last row of nodes
             - add lefts and rights
-    - [ ] [Subtree of Another Tree](https://leetcode.com/problems/subtree-of-another-tree/)
+    - [x] [Subtree of Another Tree](https://leetcode.com/problems/subtree-of-another-tree/)
+      - *Not very efficient solution, there should be smth better. Runtime - beats 6%, Memory - 93%*
+      - **time - O(N * M), space - O(N * M)**
+        - 2 funcs:
+          - `compare`
+            - `if root == subRoot && compare(root->left, subRoot->left) && compare(root->right, subRoot->right) -> return true`
+            - if root or subRoot is Null -> stop and don't call next compare
+          - `explore`
+            - `if root == subRoot -> compare`
+            - `if explore(root->left, subRoot) || explore(root->right, subRoot) -> return true`  
     - [ ] [Construct Binary Tree from Preorder and Inorder Traversal](https://leetcode.com/problems/construct-binary-tree-from-preorder-and-inorder-traversal/)
     - [ ] [Validate Binary Search Tree](https://leetcode.com/problems/validate-binary-search-tree/)
     - [ ] [Kth Smallest Element in a BST](https://leetcode.com/problems/kth-smallest-element-in-a-bst/)
