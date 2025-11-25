@@ -470,7 +470,21 @@
           - `explore`
             - `if root == subRoot -> compare`
             - `if explore(root->left, subRoot) || explore(root->right, subRoot) -> return true`   
-    - [ ] [Construct Binary Tree from Preorder and Inorder Traversal](https://leetcode.com/problems/construct-binary-tree-from-preorder-and-inorder-traversal/)
+    - [x] [Construct Binary Tree from Preorder and Inorder Traversal](https://leetcode.com/problems/construct-binary-tree-from-preorder-and-inorder-traversal/)
+      - **time - O(N), space - O(1)**
+        - create dict `mapping` where **keys** are values and **values** are keys of elements from `inorder`
+          - `inorder = [4,2,1]` -> `mapping = {4:0, 2:1, 1:2}`
+        - `preorderIndex = 0`
+        - `recurs func(start, end):`
+          - `if start > end`
+            - `return null`
+          - `rootVal = preorder[preorderIndex]`
+          - `preorderIndex += 1` (we move further and further)
+          - `mid = mapping[inorder[rootVal]]`
+          - `root = Node(rootVal)`
+          - `root->left = recurs(start, mid)`
+          - `root->right = recurs(mid + 1, end)`
+        - `return recurs(0, len(inorder))`
     - [ ] [Validate Binary Search Tree](https://leetcode.com/problems/validate-binary-search-tree/)
     - [ ] [Kth Smallest Element in a BST](https://leetcode.com/problems/kth-smallest-element-in-a-bst/)
     - [ ] [Lowest Common Ancestor of a BST](https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-search-tree/)
@@ -511,6 +525,7 @@ I think I should go back and solve this questions again:
   - [x] [Longest Repeating Character Replacement](https://leetcode.com/problems/longest-repeating-character-replacement/)
 - [ ] Tree
   - [ ] [Binary Tree Maximum Path Sum](https://leetcode.com/problems/binary-tree-maximum-path-sum/)
+  - [ ] [Construct Binary Tree from Preorder and Inorder Traversal](https://leetcode.com/problems/construct-binary-tree-from-preorder-and-inorder-traversal/)
 
 Also, I think I can find better approach for this problems:
 - [ ] [Missing Number](https://leetcode.com/problems/missing-number/)
