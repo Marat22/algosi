@@ -485,7 +485,14 @@
           - `root->left = recurs(start, mid)`
           - `root->right = recurs(mid + 1, end)`
         - `return recurs(0, len(inorder))`
-    - [ ] [Validate Binary Search Tree](https://leetcode.com/problems/validate-binary-search-tree/)
+    - [x] [Validate Binary Search Tree](https://leetcode.com/problems/validate-binary-search-tree/)
+      - **time - O(N), memory - O(N):**
+        - for each node there is a minimum and maximum possible value, which depends on parents of node
+        - e.g. [5,3,10,null,8,null,null]
+          1. OK for root, because 5 is inside boundaries (-inf, +inf). then, for left child max possible val is 4, for right child minimum possible val is 6
+          2. OK for left child of root, because 3 is inside boundaries \(-inf, 4\]. for left child max possible val is 2, min possible val is -inf, for *right child max possible val is 4, min possible val is 4*
+          3. OK for right child of root, because 10 is inside boundaries \[6, +inf\)
+          4. NOT OK for root->left->right, because *8 is not inside boundaries \[4, 4\]*
     - [ ] [Kth Smallest Element in a BST](https://leetcode.com/problems/kth-smallest-element-in-a-bst/)
     - [ ] [Lowest Common Ancestor of a BST](https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-search-tree/)
     - [ ] [Implement Trie (Prefix Tree)](https://leetcode.com/problems/implement-trie-prefix-tree/)
