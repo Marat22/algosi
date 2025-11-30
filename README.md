@@ -493,12 +493,11 @@
           2. OK for left child of root, because 3 is inside boundaries \(-inf, 4\]. for left child max possible val is 2, min possible val is -inf, for *right child max possible val is 4, min possible val is 4*
           3. OK for right child of root, because 10 is inside boundaries \[6, +inf\)
           4. NOT OK for root->left->right, because *8 is not inside boundaries \[4, 4\]*
+    - [x] [Kth Smallest Element in a BST](https://leetcode.com/problems/kth-smallest-element-in-a-bst/)
       - **time - O(N), space - O(k)**
         - create `priority_queue<int, vector<int>, greater<int>>` (this type of queue returns vals in sorted order)
         - we add all nodes' vals to this queue
         - get kth smallest element using queue
-    - [ ] [Validate Binary Search Tree](https://leetcode.com/problems/validate-binary-search-tree/)
-    - [ ] [Kth Smallest Element in a BST](https://leetcode.com/problems/kth-smallest-element-in-a-bst/)
     - [ ] [Lowest Common Ancestor of a BST](https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-search-tree/)
     - [ ] [Implement Trie (Prefix Tree)](https://leetcode.com/problems/implement-trie-prefix-tree/)
     - [ ] [Add and Search Word](https://leetcode.com/problems/add-and-search-word-data-structure-design/)
