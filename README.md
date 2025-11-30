@@ -498,7 +498,20 @@
         - create `priority_queue<int, vector<int>, greater<int>>` (this type of queue returns vals in sorted order)
         - we add all nodes' vals to this queue
         - get kth smallest element using queue
-    - [ ] [Lowest Common Ancestor of a BST](https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-search-tree/)
+    - [x] [Lowest Common Ancestor of a BST](https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-search-tree/)
+      - **time - O(height), space - O(height):**
+        - `if (p->val > q->val)`
+          - swap(p, q)
+        - lowestCommonAncestor(root, p, q)
+          - if `node->val` is smaller than `p` (*smallest val*) and `node->right != nullptr`
+            - `node->right` is also ancestor and it should be explored
+            - lowestCommonAncestor(`node->right`, `p`, `q`)
+          - if `node->val` is bigger than `q` (*biggest val*) and `node->left != nullptr`
+            - `node->left` is also ancestor and it should be explored
+            - lowestCommonAncestor(`node->left`, `p`, `q`)
+          - else
+            - `node->left` and `node-right` are not ancestors and should not  be explored
+            - return root
     - [ ] [Implement Trie (Prefix Tree)](https://leetcode.com/problems/implement-trie-prefix-tree/)
     - [ ] [Add and Search Word](https://leetcode.com/problems/add-and-search-word-data-structure-design/)
     - [ ] [Word Search II](https://leetcode.com/problems/word-search-ii/)
