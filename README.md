@@ -512,7 +512,54 @@
           - else
             - `node->left` and `node-right` are not ancestors and should not  be explored
             - return root
-    - [ ] [Implement Trie (Prefix Tree)](https://leetcode.com/problems/implement-trie-prefix-tree/)
+    - [x] [Implement Trie (Prefix Tree)](https://leetcode.com/problems/implement-trie-prefix-tree/)
+      - **time - O(N), space - O(NL)**
+        - Each Trie should have:
+          - Children: dict[char, Trie] = {}
+          - IsEnd: bool = false
+        - insert
+          - we need pointer to current Trie and pointer to iterate through word
+            ```cpp
+            int p = 0;
+            Trie *cur = this;
+            ```
+          - then iterate through all chars in `word` 
+            ```cpp 
+            while (p < word.size()) {
+            ```
+            - if `cur` was never continued by word[p] -> create corresponding Trie
+              ```cpp
+              if ( cur->Children.find(word[p]) == cur->Children.end() ) {
+                  cur->Children[word[p]] = new Trie();
+              }
+              ```
+            - update pointers:
+              ```cpp
+              cur = (cur->Children[word[p]]);
+              p++;
+              ```
+          - save that this Trie is the end of the word
+            ```cpp
+            cur->IsEnd = true;
+            ```
+        - search
+          - `search` is almost the same as `insert`, but
+            - if `cur` never was continued by `word[p]` -> return false;
+              ```cpp
+              if ( cur->Children.find(word[p]) == cur->Children.end() ) {
+                  return false;
+              }
+              ```
+            - in the end of func we should check that `cur` trie is actually the end of word:
+              ```cpp
+              return cur->IsEnd
+              ```
+        - startsWith
+          - `startsWith` is almost the same as `search`, but
+            - we don't need to check that last Trie is end of word, so in the end of the func we just return true
+              ```cpp
+              return true
+              ```
     - [ ] [Add and Search Word](https://leetcode.com/problems/add-and-search-word-data-structure-design/)
     - [ ] [Word Search II](https://leetcode.com/problems/word-search-ii/)
 
