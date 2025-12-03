@@ -560,7 +560,10 @@
               ```cpp
               return true
               ```
-    - [ ] [Add and Search Word](https://leetcode.com/problems/add-and-search-word-data-structure-design/)
+    - [x] [Add and Search Word](https://leetcode.com/problems/add-and-search-word-data-structure-design/)
+      - **time - O(N∗26^M):**
+        - almost as previous one but:
+          - during `search` if `word[i]` == '.', then just try to run search for word[i+1:] using cur->Children[...try all non-null...]
     - [ ] [Word Search II](https://leetcode.com/problems/word-search-ii/)
 
 - [ ] Heap
