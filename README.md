@@ -10,6 +10,38 @@
     - [x] [Product of Array Except Self](https://leetcode.com/problems/product-of-array-except-self/)
     - [X] [Maximum Subarray](https://leetcode.com/problems/maximum-subarray/)
     - [X] [Maximum Product Subarray](https://leetcode.com/problems/maximum-product-subarray/)
+      - **time - O(N), space - (1):**
+        - *Main idea: iterate through array and update Max and Min possible product, which includes current value. Edge case: if val == 0, then Max=1,Min=1*
+        - *Step by step:*
+          - initialize `Max`, `Min` and `res`
+            ```cpp
+            int Max = 1, Min = 1, res = INT_MIN;
+            ```
+          - iterate through `nums`:
+            ```cpp
+            for(const int& val : nums) {
+            ```
+            - if `val` is 0, then set `Min=1` and `Max=1`, BUT DO NOT update `res`
+              ```cpp
+              if (val == 0) {
+                  Max = 1;
+                  Min = 1;
+                  res = max(val, res);
+              } 
+              ```
+            - else update `Max` and `Min` in such way that they include `val`. then update the `res`
+              ```cpp
+              else {
+                  int NewMax = max(Max * val, Min * val);
+                  NewMax = max(NewMax, val);
+                  int NewMin = min(Min * val, Max * val);
+                  NewMin = min(NewMin, val);
+                  Max = NewMax;
+                  Min = NewMin;
+                  res = max(Max, res);
+              }
+              ```
+          - `return res`
     - [x] [Find Minimum in Rotated Sorted Array](https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/)
     - [x] [Search in Rotated Sorted Array](https://leetcode.com/problems/search-in-rotated-sorted-array/)
     - [x] [3Sum](https://leetcode.com/problems/3sum/)
