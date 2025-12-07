@@ -596,7 +596,11 @@
       - **time - O(N∗26^M):**
         - almost as previous one but:
           - during `search` if `word[i]` == '.', then just try to run search for word[i+1:] using cur->Children[...try all non-null...]
-    - [ ] [Word Search II](https://leetcode.com/problems/word-search-ii/)
+    - [x] [Word Search II](https://leetcode.com/problems/word-search-ii/)
+      - **time - O(M∗(4∗3(L−1))), space - O(N):**
+        - *Main idea:*
+          - create Trie tree for `words`
+          - iterate through board and using DFS check if any word from `words` can be made up
 
 - [ ] Heap
     - [ ] [Merge K Sorted Lists](https://leetcode.com/problems/merge-k-sorted-lists/)
