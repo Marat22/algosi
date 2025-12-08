@@ -454,7 +454,7 @@
           - If s[l] == s[r] -> res++, and then expand palindrome (`l--`, `r++`) and repeat 
     - [ ] [Encode and Decode Strings (Premium)](https://leetcode.com/problems/encode-and-decode-strings/)
 
-- [ ] Tree
+- [x] Tree
     - [x] [Maximum Depth of Binary Tree](https://leetcode.com/problems/maximum-depth-of-binary-tree/)
     - [x] [Same Tree](https://leetcode.com/problems/same-tree/)
       - **time - O(N), space - O(N)**
@@ -603,7 +603,16 @@
           - iterate through board and using DFS check if any word from `words` can be made up
 
 - [ ] Heap
-    - [ ] [Merge K Sorted Lists](https://leetcode.com/problems/merge-k-sorted-lists/)
+    - [x] [Merge K Sorted Lists](https://leetcode.com/problems/merge-k-sorted-lists/)
+      - **time - O(Nlogk), space - O(K)**
+        - create `priority_queue` (e.g. `heapq` in python)
+        - add nodes to `priority_queue`
+        - create `result_node(val=0)` 
+        - save start of result sequence: `root` = `result_node`  
+        - add `smallest_node` from `priority_queue` to `result_node` and add `smallest_node.next` to `priority_queue` 
+        - `smallest_node` = `priority_queue.pop()` # pop smallest element
+        - `priority_queue.put(smallest_node.next)`
+        - return `root.next`
     - [ ] [Top K Frequent Elements](https://leetcode.com/problems/top-k-frequent-elements/)
     - [ ] [Find Median from Data Stream](https://leetcode.com/problems/find-median-from-data-stream/)
 
