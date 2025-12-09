@@ -613,7 +613,44 @@
         - `smallest_node` = `priority_queue.pop()` # pop smallest element
         - `priority_queue.put(smallest_node.next)`
         - return `root.next`
-    - [ ] [Top K Frequent Elements](https://leetcode.com/problems/top-k-frequent-elements/)
+    - [x] [Top K Frequent Elements](https://leetcode.com/problems/top-k-frequent-elements/)
+      - **time - O(N), space - O(N)**
+        - calc frequency of each num
+          ```cpp
+          unordered_map<int, int> count;
+          count.reserve(nums.size());
+
+          for (const auto& num : nums) {
+              count[num]++;
+          }
+          ```
+        - add to buckets where index = frequency, vals = list of nums with such frequency
+        ```cpp
+
+        vector<vector<int>> bucket (nums.size() + 1);
+        for (auto &p : count) {
+            bucket[p.second].push_back(p.first);
+        }
+        ```
+        - iterate through bucket in reverse to get most frequent nums first. return res as soon there are enough vals:
+        ```cpp
+          for (int z = bucket.size() - 1; z >= 0; z --) {
+
+            for (int j = bucket[z].size() - 1; j >= 0; j--) {
+
+                if (res.size() == k) {
+
+                    return res;
+
+                }
+
+
+                res.push_back(bucket[z][j]);
+
+            }
+
+        }
+        ```
     - [ ] [Find Median from Data Stream](https://leetcode.com/problems/find-median-from-data-stream/)
 
 ## Notes
@@ -646,6 +683,8 @@ I think I should go back and solve this questions again:
   - [ ] [Binary Tree Maximum Path Sum](https://leetcode.com/problems/binary-tree-maximum-path-sum/)
   - [ ] [Construct Binary Tree from Preorder and Inorder Traversal](https://leetcode.com/problems/construct-binary-tree-from-preorder-and-inorder-traversal/)
 
+- [ ] Heap
+  - [ ] [Top K Frequent Elements](https://leetcode.com/problems/top-k-frequent-elements/)
 Also, I think I can find better approach for this problems:
 - [ ] [Missing Number](https://leetcode.com/problems/missing-number/)
 - [ ] String
