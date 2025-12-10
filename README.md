@@ -602,7 +602,7 @@
           - create Trie tree for `words`
           - iterate through board and using DFS check if any word from `words` can be made up
 
-- [ ] Heap
+- [x] Heap
     - [x] [Merge K Sorted Lists](https://leetcode.com/problems/merge-k-sorted-lists/)
       - **time - O(Nlogk), space - O(K)**
         - create `priority_queue` (e.g. `heapq` in python)
@@ -651,7 +651,21 @@
 
         }
         ```
-    - [ ] [Find Median from Data Stream](https://leetcode.com/problems/find-median-from-data-stream/)
+    - [x] [Find Median from Data Stream](https://leetcode.com/problems/find-median-from-data-stream/)
+      - **time - O(log n), space - O(N)**
+        - to solve this problem we need to priority queues: 
+          - `smaller`, `bigger`.
+          - `smaller.top()` is biggest val from `smaller`, `bigger.top()` is smallest val from `bigger`.
+        - when we add new num, we add it according to these rules:
+          - Biggest val of `smaller` should be always SMALLER than smallest val from `bigger`.
+          - Difference between `smaller.size()` and `bigger.size()` should be <= 1. if difference becomes bigger than 1 -> we rebalance `smaller` and `bigger` queues, BUT DO NOT VIOLATE previous rule (_biggest val of `smaller` should be always SMALLER than smallest val from `bigger`_)
+        - how do we find median?
+          - if smaller.size() > bigger.size()
+            - median = smaller.top()
+          - if bigger.size() > smaller.size()
+            - median = bigger.top()
+          - else
+            - median = (smaller + bigger) / 2.0 
 
 ## Notes
 I think I should go back and solve this questions again:
@@ -682,9 +696,9 @@ I think I should go back and solve this questions again:
 - [ ] Tree
   - [ ] [Binary Tree Maximum Path Sum](https://leetcode.com/problems/binary-tree-maximum-path-sum/)
   - [ ] [Construct Binary Tree from Preorder and Inorder Traversal](https://leetcode.com/problems/construct-binary-tree-from-preorder-and-inorder-traversal/)
-
 - [ ] Heap
   - [ ] [Top K Frequent Elements](https://leetcode.com/problems/top-k-frequent-elements/)
+  - [ ] [Find Median from Data Stream](https://leetcode.com/problems/find-median-from-data-stream/)
 Also, I think I can find better approach for this problems:
 - [ ] [Missing Number](https://leetcode.com/problems/missing-number/)
 - [ ] String
