@@ -399,7 +399,7 @@
         - iterate through whole board using dfs, until `true`
         - if none returned `true` -> return `false`
 
-- [ ] String
+- [x] String
     - [x] [Longest Substring Without Repeating Characters](https://leetcode.com/problems/longest-substring-without-repeating-characters/)
       - *note: i solved the problem using `C++` and `C`. My `C` solution has more efficient algorithm. Here I describe algorithm I applied for `C` solution.*
       - **BE CAUTIOUS:** in my first implementation i made mistake - i did not consider case when one substring can be part of two different substrings. For example in word "mewmkz" the substring "ewm" can be part of "mewm" and part of "ewmkz", however, "ewmkz" is bigger. 
@@ -452,8 +452,12 @@
         - There are 2 types of palindromes: odd ("zaz") or even ("issi) length
         - For every point in `s` try to create odd and even palindrome. 
           - If s[l] == s[r] -> res++, and then expand palindrome (`l--`, `r++`) and repeat 
-    - [ ] [Encode and Decode Strings (Premium)](https://leetcode.com/problems/encode-and-decode-strings/)
-
+    - [x] [Encode and Decode Strings (Premium)](https://leetcode.com/problems/encode-and-decode-strings/)
+      - **time - O(N), space - O(N)**
+        - use this notation:
+          - `len of word` + `#` + `word`
+          - `len of word1` + `#` + `word1`
+        - e.g. `2#ee4#jaja`
 - [x] Tree
     - [x] [Maximum Depth of Binary Tree](https://leetcode.com/problems/maximum-depth-of-binary-tree/)
     - [x] [Same Tree](https://leetcode.com/problems/same-tree/)
