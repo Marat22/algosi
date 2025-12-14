@@ -720,7 +720,7 @@ I think I should go back and solve this questions again:
 - [x] Binary
     - [x] [Sum of Two Integers](https://leetcode.com/problems/sum-of-two-integers/). Cheated for this question.
 - [ ] Dynamic Programming
-    - [ ] [Coin Change](https://leetcode.com/problems/coin-change/)
+    - [x] [Coin Change](https://leetcode.com/problems/coin-change/)
     - [ ] [Longest Increasing Subsequence](https://leetcode.com/problems/longest-increasing-subsequence/)
     - [ ] [Longest Common Subsequence](https://leetcode.com/problems/longest-common-subsequence/). Cheated.
     - [x] [Word Break](https://leetcode.com/problems/word-break/). Cheaaated. However, i watched Bottom-Up solution, but implemented Top-down, so it's just half cheating
