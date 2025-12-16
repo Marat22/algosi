@@ -136,6 +136,8 @@
             - i = 0 (nums[i]=1)
               - dp[0] = 2
           - and then we return max(dp)
+        - time - O(N log N), space - O(N)
+          - [Binary Search solution](https://leetcode.com/problems/longest-increasing-subsequence/solutions/7418532/9537-2025-python-binary_search-bisectbis-9tt5)
     - [x] [Longest Common Subsequence](https://leetcode.com/problems/longest-common-subsequence/)
         - **O(n*m) Bottom Up**: 
           - Make matrix `n` x `m`. Find best solution for `text1[n-1:]` and `text2[m-1:]`, then to `text1[n-2:]` and `text2[m-1:]`, ...
@@ -721,7 +723,7 @@ I think I should go back and solve this questions again:
     - [x] [Sum of Two Integers](https://leetcode.com/problems/sum-of-two-integers/). Cheated for this question.
 - [ ] Dynamic Programming
     - [x] [Coin Change](https://leetcode.com/problems/coin-change/)
-    - [ ] [Longest Increasing Subsequence](https://leetcode.com/problems/longest-increasing-subsequence/)
+    - [x] [Longest Increasing Subsequence](https://leetcode.com/problems/longest-increasing-subsequence/)
     - [ ] [Longest Common Subsequence](https://leetcode.com/problems/longest-common-subsequence/). Cheated.
     - [x] [Word Break](https://leetcode.com/problems/word-break/). Cheaaated. However, i watched Bottom-Up solution, but implemented Top-down, so it's just half cheating
     - [ ] [Combination Sum IV](https://leetcode.com/problems/combination-sum-iv/). I cheated.
