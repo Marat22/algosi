@@ -742,7 +742,7 @@ I think I should go back and solve this questions again:
   - [x] [Longest Repeating Character Replacement](https://leetcode.com/problems/longest-repeating-character-replacement/)
 - [ ] Tree
   - [ ] [Binary Tree Maximum Path Sum](https://leetcode.com/problems/binary-tree-maximum-path-sum/)
-  - [ ] [Construct Binary Tree from Preorder and Inorder Traversal](https://leetcode.com/problems/construct-binary-tree-from-preorder-and-inorder-traversal/)
+  - [x] [Construct Binary Tree from Preorder and Inorder Traversal](https://leetcode.com/problems/construct-binary-tree-from-preorder-and-inorder-traversal/)
 - [ ] Heap
   - [ ] [Top K Frequent Elements](https://leetcode.com/problems/top-k-frequent-elements/)
   - [ ] [Find Median from Data Stream](https://leetcode.com/problems/find-median-from-data-stream/)
