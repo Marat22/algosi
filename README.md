@@ -724,7 +724,7 @@ I think I should go back and solve this questions again:
 - [ ] Dynamic Programming
     - [x] [Coin Change](https://leetcode.com/problems/coin-change/)
     - [x] [Longest Increasing Subsequence](https://leetcode.com/problems/longest-increasing-subsequence/)
-    - [ ] [Longest Common Subsequence](https://leetcode.com/problems/longest-common-subsequence/). Cheated.
+    - [x] [Longest Common Subsequence](https://leetcode.com/problems/longest-common-subsequence/). Cheated.
     - [x] [Word Break](https://leetcode.com/problems/word-break/). Cheaaated. However, i watched Bottom-Up solution, but implemented Top-down, so it's just half cheating
     - [ ] [Combination Sum IV](https://leetcode.com/problems/combination-sum-iv/). I cheated.
 - [ ] Graph
