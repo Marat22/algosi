@@ -64,45 +64,46 @@
     - [x] [Sum of Two Integers](https://leetcode.com/problems/sum-of-two-integers/)
       - **time - O(1), space - O(1):**
         - for `0b01` (1) and `0b10` (2) we can just use `bitwise OR` to get their sum :
-        ```
-        0b01 OR
-        0b10 =
-        0b11 (= 3)
-        ``` 
-        - however, if at least one bit is enabled both in `a` and `b`, we can't use `bitwise OR`, because in this case we loose bits. For example, it doesn't work with `0b11` (3) and `0b01` (1), which sum should be 5:
-        ```
-        0b11 OR
-        0b01 =
-        0b11 (= 3)
-        ```
-        - so, to solve this problem, we need to rewrite `a` and `b` in such way that their sum gives same `sum` but no same bits enabled. e.g.`0b010` (1) and `0b100` (4), which sum is also 5:
-        ```
-        0b010 OR
-        0b100 =
-        0b110 (5)
-        ```
-          - now we got correct answer
-        - but how can we modify `a` and `b` in such way that they don't have same enables bits?
-          - while `a` and `b` have at least one common enabled bit
-            ```cpp
-            while ((a & b) != 0) {
             ```
+            0b01 OR
+            0b10 =
+            0b11 (= 3)
+            ``` 
+        - however, if at least one bit is enabled both in `a` and `b`, we can't use `bitwise OR`, because in this case we loose bits. For example, it doesn't work with `0b101` (5) and `0b001` (1), which sum should be 6:
+            ```
+            0b101 OR
+            0b001 =
+            0b101 (= 5)
+            ```
+            - 5 isn't correct answer
+        - so, to solve this problem, we need to rewrite `a` and `b` in such way that their sum gives same `sum` but no same bits enabled. e.g.`0b010` (2) and `0b100` (4), which sum is also 6:
+            ```
+            0b010 OR
+            0b100 =
+            0b110 (= 6)
+            ```
+            - now we got correct answer
+        - but how can we modify `a` and `b` in such way that they don't have same enables bits?
+            - while `a` and `b` have at least one common enabled bit
+                ```cpp
+                while ((a & b) != 0) {
+                ```
             - we get bits that are enabled only in `a` or only in `b`
-              ```cpp
-              int tmp = a ^ b;
-              ```
+                ```cpp
+                int tmp = a ^ b;
+                ```
             - we get common enabled bits and move them left (`0b1 + 0b1 = 0b10`)
-              ```cpp
-              b = (a & b) << 1;
-              ```
+                ```cpp
+                b = (a & b) << 1;
+                ```
             - and don't forget to update `a`:
-              ```cpp
-              a = tmp;
-              ```
+                ```cpp
+                a = tmp;
+                ```
         - and when `a` and `b` don't have common enabled bits, we can return the answer:
-          ```cpp
-          return a | b;
-          ```
+            ```cpp
+            return a | b;
+            ```
     - [x] [Number of 1 Bits](https://leetcode.com/problems/number-of-1-bits/)
     - [x] [Counting Bits](https://leetcode.com/problems/counting-bits/)
     - [x] [Missing Number](https://leetcode.com/problems/missing-number/)
