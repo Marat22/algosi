@@ -727,7 +727,7 @@ I think I should go back and solve this questions again:
     - [x] [Longest Increasing Subsequence](https://leetcode.com/problems/longest-increasing-subsequence/)
     - [x] [Longest Common Subsequence](https://leetcode.com/problems/longest-common-subsequence/). Cheated.
     - [x] [Word Break](https://leetcode.com/problems/word-break/). Cheaaated. However, i watched Bottom-Up solution, but implemented Top-down, so it's just half cheating
-    - [ ] [Combination Sum IV](https://leetcode.com/problems/combination-sum-iv/). I cheated.
+    - [x] [Combination Sum IV](https://leetcode.com/problems/combination-sum-iv/). I cheated.
 - [ ] Graph
     - [ ] [Course Schedule](https://leetcode.com/problems/course-schedule/). Cheated, didn't even rewrite in C or Erlang.
     - [ ] [Pacific Atlantic Water Flow](https://leetcode.com/problems/pacific-atlantic-water-flow/). Even after watched explanation by NeetCode spent about 2 hours to implement. I surely need to come back to this.
