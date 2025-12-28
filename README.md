@@ -719,7 +719,7 @@
 I think I should go back and solve this questions again:
 - [ ] Array
   - [x] [3Sum](https://leetcode.com/problems/3sum/). Cheated for this question.
-  - [ ] [Maximum Product Subarray](https://leetcode.com/problems/maximum-product-subarray/)
+  - [x] [Maximum Product Subarray](https://leetcode.com/problems/maximum-product-subarray/)
 - [x] Binary
     - [x] [Sum of Two Integers](https://leetcode.com/problems/sum-of-two-integers/). Cheated for this question.
 - [ ] Dynamic Programming
