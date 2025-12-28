@@ -729,7 +729,7 @@ I think I should go back and solve this questions again:
     - [x] [Word Break](https://leetcode.com/problems/word-break/). Cheaaated. However, i watched Bottom-Up solution, but implemented Top-down, so it's just half cheating
     - [x] [Combination Sum IV](https://leetcode.com/problems/combination-sum-iv/). I cheated.
 - [ ] Graph
-    - [ ] [Course Schedule](https://leetcode.com/problems/course-schedule/). Cheated, didn't even rewrite in C or Erlang.
+    - [x] [Course Schedule](https://leetcode.com/problems/course-schedule/). Cheated, didn't even rewrite in C or Erlang.
     - [ ] [Pacific Atlantic Water Flow](https://leetcode.com/problems/pacific-atlantic-water-flow/). Even after watched explanation by NeetCode spent about 2 hours to implement. I surely need to come back to this.
     - [ ] [Longest Consecutive Sequence](https://leetcode.com/problems/longest-consecutive-sequence/)
     - [ ] [Alien Dictionary (Premium)](https://leetcode.com/problems/alien-dictionary/)
