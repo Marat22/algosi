@@ -730,7 +730,7 @@ I think I should go back and solve this questions again:
     - [x] [Combination Sum IV](https://leetcode.com/problems/combination-sum-iv/). I cheated.
 - [ ] Graph
     - [x] [Course Schedule](https://leetcode.com/problems/course-schedule/). Cheated, didn't even rewrite in C or Erlang.
-    - [ ] [Pacific Atlantic Water Flow](https://leetcode.com/problems/pacific-atlantic-water-flow/). Even after watched explanation by NeetCode spent about 2 hours to implement. I surely need to come back to this.
+    - [x] [Pacific Atlantic Water Flow](https://leetcode.com/problems/pacific-atlantic-water-flow/). Even after watched explanation by NeetCode spent about 2 hours to implement. I surely need to come back to this.
     - [ ] [Longest Consecutive Sequence](https://leetcode.com/problems/longest-consecutive-sequence/)
     - [ ] [Alien Dictionary (Premium)](https://leetcode.com/problems/alien-dictionary/)
     - [ ] [Graph Valid Tree (Premium)](https://leetcode.com/problems/graph-valid-tree/)
