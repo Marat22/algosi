@@ -91,7 +91,7 @@ In this repo you can find:
             0b110 (= 6)
             ```
             - now we got correct answer
-        - but how can we modify `a` and `b` in such way that they don't have same enables bits?
+        - but how can we modify `a` and `b` in such way that they don't have same enabled bits?
             - while `a` and `b` have at least one common enabled bit
                 ```cpp
                 while ((a & b) != 0) {
