@@ -1,3 +1,11 @@
+# About repo
+In this repo you can find:
+- Leetcode
+  - [Blind 75 explanations](#top-75-leetcode-questions) and [solutions](/leetcode/)
+  - Some [other leetcode solutions](/leetcode/_Other/)
+- [Solutions](/yandex_trainings/) and (rarely) [explanations](#yandex-contest) for [yandex 2025 autumn contest](https://yandex.ru/yaintern/training/algorithm-training)
+- My [implementations of basic data sctructures](/data_structures/) (at 2025-01-03 only list is implemented)
+
 # Leetcode
 [My leetcode profile](https://leetcode.com/u/maratsaifutdinov22/).
 
